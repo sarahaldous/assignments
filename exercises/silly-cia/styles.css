@@ -1,0 +1,36 @@
+h1 {
+    color: darkgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+p {
+    line-height: 25px;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    width: 50%;
+}
+
+.alsoLike {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+img {
+    float:left;
+    display: inline-block;
+    height: 400 px;
+    width: 400 px;
+}
