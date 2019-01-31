@@ -1,24 +1,16 @@
 // var sayHello = function(){
 //     console.log("hello class")
 // }
-// sayHello()
-var person = "Luigi"
+// This way won't hoist
 
+sayHello()
 function sayHello(){
-    console.log("hello " + name)
+    console.log("hello class")
 }
-
-sayHello(person)
-
-if(true){
-    console.log ("It's true")
-} else {
-    console.log("It's the opposite of true")
+// This way will hoist
+var name = "Jezebel"
+var age = 400
+function greeting(){
+    console.log("hello " + name + ", how do you like being 400?")
 }
-
-var person = {
-    name: "Nick"
-}
-
-var books = ["book1", "book2"]
-var b = "books"
+greeting()

@@ -1,0 +1,40 @@
+h1 {
+    text-transform: uppercase;
+}
+span {
+    color: rgb(53, 52, 52)
+}
+header {
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 40px;
+    text-align: center;
+    border: 2px solid gray;
+
+
+}
+section {
+    display: inline-block;
+    border: 5px dotted black;
+    width: 100 px;
+    height: 100px;
+
+}
+article {
+    display: inline-block;
+    border: 2px solid black;
+    
+}
+aside {
+    display: inline-block;
+
+
+}
+div {
+    column-count: 4;
+}
+footer {
+    margin: 10px;
+    border: 1px solid black;
+    text-align: center;
+}

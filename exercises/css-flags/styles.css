@@ -1,0 +1,115 @@
+
+body{
+    background-color: #ccc;
+    position: relative;
+
+}
+.french-flag {
+    padding: 33.33%;
+    background-color: white;
+    position: relative;
+    margin: 20px;
+}
+
+.french-flag:before {
+    content: "";
+    width: 33.33%;
+    height: 100%;
+    background-color: #0055A4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.french-flag:after {
+    content: "";
+    width: 33.33%;
+    height: 100%;
+    background-color: #EF4135;
+    position: absolute;
+    top: 0;
+    right: 0;
+} 
+
+
+.german-flag {
+    padding: 30%;
+    background-color: red;
+    position:relative;
+    margin: 20px;
+  }
+  
+  .german-flag:before {
+    content: "";
+    width: 100%;
+    height: 33.33%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .german-flag:after {
+    content: "";
+    width: 100%;
+    height: 33.33%;
+    background-color: #FFCC00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+div {
+    background-color: gray;
+    position:relative;
+}
+    .madagascar-flag{
+    padding: 30%;
+    background-color: white;
+    position:relative;
+  }
+  
+  .madagascar-flag:before {
+    content: "";
+    width: 60%;
+    height: 50%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .madagascar-flag:after {
+    content: "";
+    width: 60%;
+    height: 50%;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  } 
+
+.swiss-flag {
+    background-color: red;
+    height: 80%;
+    width: 100%;
+
+}
+.swiss-flag-vertical {
+    background-color: white;
+    width: 15%;
+    height: 70%;
+    margin-left: 40%;
+    position: relative;
+    top: 20%;
+
+}
+.swiss-flag-horizontal {
+    background-color: white;
+    width: 70%;
+    height: 20%;
+    margin-left: 15%;
+    position: relative;
+    top: -25%;
+}
+
+/* Japan flag: border-radius 50%; */

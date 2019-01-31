@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box; 
+    font-size: 0px;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+}
+main{
+    margin: 15px;
+}
+div{
+    display: inline-block;
+    background-color: white;
+    width: 500px;
+    height: 100px;
+    padding:20px;
+    border: solid white 5px;
+}
+.divA{
+    background-color: #f5c6d6;
+    width: 100%;
+}
+.divB{
+    background-color: #EE2E84;
+    width: 25%;
+}
+.divC {
+    background-color: #85cfd8;
+    width: 50%;
+}
+.divD {
+    background-color: #8dc63f;
+    width: 75%;
+}
+.divE {
+    background-color: #e76e34;
+    width: 25%
+}

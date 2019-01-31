@@ -1,0 +1,11 @@
+var a = "someting"
+return a
+
+function sum(){
+    return a+b
+}
+
+function sum(){
+    return 5 + 5
+}
+console.log(sum())

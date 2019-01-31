@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Can make life easier to have this as your overall default. If you add paragraphs, they won't have margins and you'll have to adjust that. */
+/* Asterisk controls all the elements to a specific attribute (changes all font to color red, in this case */
+body{
+    background-color: aquamarine
+}
+p{
+    display: inline-block;
+    width: auto;
+}
+div{
+    border-sizing: border-box;
+    display: inline-block;
+    margin: 10px;
+    background-color: purple;
+    width: 200px;
+    height: 100px;
+    padding:20px;
+    border: solid red 5px;
+}
