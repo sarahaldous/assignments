@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type = "text/javascript">
+        function info() {
+            alert ("alert")
+            document.write 
+        }  
+    </script>
+</head>
+<body>
+    <h1>Welcome to Limited Airlines!</h1>
+    <h5>We Don't Go Many Places, But The Food Is Great!</h5>
+    <form name="travelForm">
+    <h3>First Name</h3>
+        <input type="text" placeholder="First Name" name="firstName">
+    <h3>Last Name</h3>
+    <input type="text" placeholder="Last Name" name="lastName">
+    <h3>Age</h3>
+        <input type="number" name="age">
+    <h3>Gender</h3>
+        Female <input type="radio" value="Female" name="gender">
+        Male <input type="radio" value="Male" name="gender">
+    <h3>Travel Location</h3>
+        <div>Buenos Aires <input type="radio" value="Buenos Aires" name="destination"></div>
+        <div></div>Vienna <input type="radio" value="Vienna" name="destination"></div>
+        <div></div>Albuquerque <input type="radio" value="Albuquerque" name="destination"></div>
+        <h3>Dietary Restrictions</h3>
+        
+        <div>Vegetarian <input type="checkbox" value=" Vegetarian" name="dietRest"></div>
+        <div>Vegan <input type="checkbox" value=" Vegan" name="dietRest"></div>
+        <div>Fruitarian <input type="checkbox" value=" Fruitarian" name="dietRest"></div>
+        <div>Lactose-Free <input type="checkbox" value=" Lactose-Free" name="dietRest"></div>
+        <div>Just Cheese, Please <input type="checkbox" value=" Just Cheese, Please" name="dietRest"></div>
+    <button>Submit</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>

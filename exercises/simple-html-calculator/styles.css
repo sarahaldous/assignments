@@ -1,0 +1,15 @@
+divA {
+    background-color: rgb(247, 244, 206);
+    display: block;
+    text-align: center;
+}
+divS {
+    background-color: paleturquoise;
+    display: block;
+    text-align: center;
+}
+divM {
+    background-color: lightpink;
+    display: block;
+    text-align: center;
+}

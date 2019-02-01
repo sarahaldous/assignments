@@ -1,26 +1,30 @@
 // Write a function that accepts two numbers as parameters and returns the sum.
-var funcOne = function(a, b) {
-    console.log(a +b);
+// function addNumbers(a, b) {
+//     console.log(a + b);
 
-}
-funcOne(6, 20)
+// }
+// addNumbers(6, 20)
 
 
-// // Write a function that accepts three numbers as parameters and returns the largest of those numbers.
+// Write a function that accepts three numbers as parameters and returns the largest of those numbers.
+
 // var funcTwo = function(a, b, c) {
 //     if ( a > b && a > c ) {
-//         console.log(a)
-//     } else if ( b > c )
-//         console.log (b)
-//     } else
-//     console.log(c)
+//         console.log(a);
+//     } else if ( b > c ) {
+//         console.log (b);
+//     } else {
+//     console.log(c);
+//     }
 // }
 // funcTwo(39, 38, 2);
+
 // using Math.max
-// function returnLargestOf3(num1, nu2, num3){
-//    return Math.max(num1, num2, num3)
+// function returnLargestOf3(a, b, c) {
+//    return Math.max(a, b, c);
 // }
-// console.log(returnLargestOf3)()
+// console.log(returnLargestOf3(39, 38, 2));
+
 
 //  Using for loop
 //  function returnLargestOf3(num1, num2, num3){
@@ -37,9 +41,33 @@ funcOne(6, 20)
 // }
 // console.log(returnLargestOf3(30, 244, 809))
 // Write a function that accepts one number as a parameter, and returns whether that number is even or odd. (Return the string "even" or "odd");
+// var i = 221;
 
+
+// function evenOrOdd(i) {
+//     if (i % 2 === 1){
+//         console.log("odd");
+//     } else {
+//         console.log("even")
+//     }
+//   }
+//   var i = 23456
+// evenOrOdd(i)
 // Write a function that accepts a string as a parameter. If the length of the string is less than or equal to twenty characters long, return the string concatenated with itself (string + string). If the string is more than twenty characters long, return the first half of the string.
 // Notes on Strings and string methods
-var myStr = “hello”
-myStr = myStr.toUpperCase()
-console.log(myStr)
+var myStr =  " your code to run";
+// console.log(str.length);
+
+function returnFirstHalf(myStr) {
+    if (myStr.length >= 20) {
+        var res = myStr.slice(0, myStr.length / 2);
+        console.log(res)
+    } else {
+        var res1 = myStr
+        console.log(res1 + res1)
+    }
+   
+}
+returnFirstHalf(myStr)
+// str = myStr.returnFirstHalf()
+// console.log(myStr)
