@@ -1,0 +1,33 @@
+body {
+    background-color: blue
+}
+h1 {
+    text-align: center;
+    font-size: 5em;
+}
+h4  {
+    text-align: center;
+    font-size: 2em;
+}
+
+#goomba {
+    max-width: 20%;
+    height: auto;
+    display: inline-block;
+}
+#bob-omb {
+    max-width: 25%;
+    height: auto;
+}
+footer {
+    text-align: center
+}
+.goombasForm {
+    font-size: 4em;
+
+}
+p {
+    font-size: 4em;
+    display: inline-block;
+    
+}

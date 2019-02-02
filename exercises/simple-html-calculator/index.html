@@ -9,18 +9,38 @@
 
 </head>
 <body>
-    <divA> Add
-        <input type="num" name="add">
-        <input type="num" name="add">
-    </divA>
-    <divS>Subtract
-        <input type="num" name="subtract">
-    </divS>
-    <divM> Multiply
-        <input type="num" name="multiply">
-        <input type="num" name="Multiply">
-    </divM>
+    <form name="addForm">
+    <div id="divA"> Add
+        <input type="number" name="addX">
+        <input type="number" name="addY">
+        
+    </div>
     <button>Find Out The Answer</button>
+</form>
+<form name="subForm">
+    <div id="divS">Subtract
+        <input type="number" name="subX">
+        <input type="number" name="subY">
+    </div>
+    <button>Find Out The Answer</button>
+</form>
+<form name="multForm">
+    <div id= "divM"> Multiply
+        <input type="number" name="multX">
+        <input type="number" name="multY">
+    </div>
+    <button>Find Out The Answer</button>
+</form>
+<form name="divForm">
+    <div id= "divD"> Divide
+        <input type="number" name="divX">
+        <input type="number" name="divY">
+    </div>
+    <button>Find Out The Answer</button>
+</form>
+    
+
+    <div id="result-container"></div>
     <script src="app.js"></script>
 </body>
 </html>
