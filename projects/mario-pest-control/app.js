@@ -12,5 +12,6 @@ form.addEventListener("submit", function(e){
     var c = form.cheepCheepQuantity.valueAsNumber
     var sum = (5 * g) + (7 * b) + (11 * c)
     p.textContent = sum
+    p.classList.add("sumOutput")
     result.appendChild(p)
 })
