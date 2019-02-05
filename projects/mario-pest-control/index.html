@@ -8,32 +8,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-image">
     <h1>Mario Pest Control</h1>
-    <h4>Pay Up, Princess! (Please)</h4>
-    <div>
-    <form name="form">
-        <img id="goomba" src="https://vignette.wikia.nocookie.net/oneminutemelee/images/5/56/IMG_0335.PNG/revision/latest?cb=20170311041218">
-        <p>Goombas, 5 Coins</p>
-        <input type="number" value= 0 name="goombaQuantity" placeholder="Goombas Total"/>
+    <h4>Pay Up, Princess!</h4>
         
-
-         <img id= "bob-omb" src="https://files.slack.com/files-pri/T03Q59F9G-FFXJ20RRU/bob-omb-net.png">
-        <p>Bob-ombs, 7 Coins</p>
-        <input type="number" value = 0 name="bobOmbQuantity" placeholder="Bob-ombs Total"/>
-            
-       
-    
-        <img src="">
-        <p>Cheep-Cheeps, 11 Coins</p>
-        <input type="number" value = 0 name="cheepCheepQuantity" placeholder="Bob-ombs Total"/>
-        <button>Submit</button>
+    <form name="form">
+        <div class="row">
+            <div class="column1">
+                <img id="goomba" src="https://vignette.wikia.nocookie.net/oneminutemelee/images/5/56/IMG_0335.PNG/revision/latest?cb=20170311041218">
+                <p class="g">Goombas</p>
+                <br>
+                <p class="gCoins">5 Coins</p>
+                <br>
+                <input type="number" value= 0 name="goombaQuantity" placeholder="Goombas Total" onClick="this.select()"/>
+            </div>
+            <div class="column2">
+                <img id= "bob-omb" src="https://files.slack.com/files-pri/T03Q59F9G-FFXJ20RRU/bob-omb-net.png">
+                <p class="bob">Bob-ombs</p>
+                <br>
+                <p class="bobCoins">7 Coins</p>
+                <br>
+                <input type="number" value = 0 name="bobOmbQuantity" placeholder="Bob-ombs Total" onClick="this.select()"/>
+            </div>
+            <div class="column3">
+                <img id="cheep-cheep" src="https://vignette.wikia.nocookie.net/luigi-mansionfanon/images/2/20/Cheep-Cheep.png/revision/latest?cb=20120708123141">
+                <p class="cheep">Cheep-Cheeps</p>
+                <br>
+                <p class="cheepCoins">11 Coins</p>
+                <br>
+                <input type="number" value = 0 name="cheepCheepQuantity" placeholder="Bob-ombs Total" onClick="this.select()"/>
+            </div>
+        </div>
+        <div class=button>
+            <button>Submit</button>
+        </div>
     </form>
    
-<div id="sum">
-</div>
-    <footer>mario@mariopestcontrol.com</footer>
-    <footer>mariopestcontrol.com</footer>
-        <footer>4733 Mario Party Drive</footer>
+    <div id="sum">
+    </div>
+    <div class="footer">
+    <h3>mario@mariopestcontrol.com</h3>
+    <h3>mariopestcontrol.com</h3>
+    <h3>4733 Mario Party Drive</h3>
+    </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

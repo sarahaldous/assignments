@@ -1,5 +1,11 @@
 body {
-    background-color: blue
+    
+
+}
+.background-image {
+    background-image: url(https://i.pinimg.com/originals/dc/8d/ef/dc8def609c27f9123c4f61a83a3b93bd.jpg);
+    background-position: center;
+    background-size: cover;
 }
 h1 {
     text-align: center;
@@ -11,26 +17,123 @@ h4  {
 }
 
 #goomba {
-    max-width: 20%;
+    max-width: 40%;
     height: auto;
     display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 0;
 }
 #bob-omb {
-    max-width: 25%;
+    max-width: 45%;
     height: auto;
+    margin-top: 50px;
+}
+#cheep-cheep {
+    max-width: 45%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 0px;
+
 }
 footer {
     text-align: center
 }
 .goombasForm {
     font-size: 4em;
+    text-align: center;
 
 }
-p {
+/* p {
     font-size: 4em;
     display: inline-block;
-    
+    margin-top: 10px;
+    margin-bottom: 70px;
+} */
+.g {
+    font-size: 4em;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 110px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
+.gCoins {
+    font-size: 4em;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.bob {
+    font-size: 4em;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.bobCoins {
+    font-size: 4em;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.cheep {
+    font-size: 4em;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.cheepCoins {
+    font-size: 4em;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+} */
 .sumOutput {
     
+}
+.row {
+    display: flex;
+}
+.column1 {
+    flex: 33%;
+    background-color: rgba(71, 211, 43, 0.288);
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+}
+.button {
+    text-align: center;
+}
+.column2 {
+    flex: 33%;
+    background-color: rgba(56, 13, 231, 0.171);
+    margin: 5px;
+    text-align: center;
+}
+.column3 {
+    flex: 33%;
+    background-color: rgba(240, 64, 88, 0.164);
+    margin: 5px;
+    text-align: center;
+}
+button {
+    width: 140px;
+    height: 100px;
+    background-color: brown;
+    font-size: 2em;
+    font-family: 'Roboto Mono', monospace;
+    justify-items: center;
+
+
+}
+.footer{
+    color: rgb(109, 230, 84);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top: 10px;
+    /* background-color: rgba(245, 245, 245, 0.356); */
+    display: flex;
+    justify-content: space-evenly;
 }
