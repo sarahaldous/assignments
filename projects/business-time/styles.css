@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(200, 243, 223);
+}
+
+h1 {
+    font-family: 'Oleo Script', cursive;
+    color: purple;
+    background-color: rgb(252, 214, 227);
+    font-size: 3em;
+    text-align: center;
+
+    
+}
+/* .background-image {
+    background-image: url(http://www.oze-iwakura.co.jp/yuri/common/images/mainimg_en.png);
+    background-position: center;
+    background-size: cover;
+} */
+img {
+    display: inline-block;
+    height: 200pt;
+    width: 200pt;
+
+}
+.topnav {
+    font-family: 'Oleo Script', cursive;
+    border: 5px solid darkmagenta;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 2em;
+    flex-direction: row;
+    color: rgb(1, 105, 105);
+    
+}
+.div {
+
+}
+.bouquets {
+    background-color: #a9e4e4;	
+}
+.flowers {
+    background-color: #f7afe7;
+}
+.plants {
+    background-color: #88d8b0;
+}
+/* font-family: 'Flamenco', cursive; 
+font-family: 'Lobster Two', cursive; 
+font-family: 'Playball', cursive;
+font-family: 'Oleo Script', cursive;
+font-family: 'Arima Madurai', cursive;
+font-family: 'Milonga', cursive;  */
