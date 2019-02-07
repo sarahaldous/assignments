@@ -1,12 +1,20 @@
 @media (min-width: 320px) and (max-width: 568px) {
-li {
-        display: inline;
+    topnav {
+        color: rgb(78, 1, 78);
+        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
+    }
+    li {
+        display: inline; 
+        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
       } 
+a {
+    color: rgb(78, 1, 78);
+}
 body {
     font-family: 'Domine', serif;
     background-color: #2d1a06;
-    color: purple;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: rgb(94, 33, 86);
+    text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
     font-size: 2em;
     text-align: center;
 }
@@ -14,7 +22,7 @@ body {
 h1 {
     font-size: 3em;
     text-align: center;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
 }
 
 .container {
@@ -25,8 +33,8 @@ h1 {
     margin-right: auto;
     padding: 55px;
     padding-left: 65px;
-    padding-bottom: 140px;
-    border: 25px solid white;
+    padding-bottom: 180px;
+    border: 25px solid beige;
 
   
 #top-center {
@@ -46,12 +54,14 @@ h1 {
 h2 {
 
 }
-  
-p1 {
-    color: #2d1a06;
-    font-size: 3em;
+a {
+    color: rgb(78, 1, 78);
+}
+p {
+    color: rgb(94, 33, 86);;
+    font-size: 1em;
     text-align: center;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
 }
 #browniePic {
     height: 400px;
@@ -72,22 +82,25 @@ p1 {
     display: flex;
     display: inline-block;
 }
+#footer {
+    display: flex;
+    display: inline-block;
+    font-size: 0.25em;
 }
-/* font-family: 'Merriweather', serif;
-font-family: 'Noto Serif', serif;
-font-family: 'Bitter', serif;
-font-family: 'Domine', serif;
-font-family: 'Jacques Francois', serif; */
+}
 
 @media (min-width: 569px) and (max-width: 1024px) {
+    a {
+    color: rgb(78, 1, 78);;
+}
     li {
         display: inline;
       }
-body {
-    font-family: 'Domine', serif;
+    body {
+        font-family: 'Domine', serif;
         background-color: #2d1a06;
-        color: purple;
-        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        color: rgb(94, 33, 86);
+        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
         font-size: 3em;
         text-align: center;
     }
@@ -95,7 +108,6 @@ body {
     h1 {
         font-size: 3em;
         text-align: center;
-        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     }
     
     .container {
@@ -107,7 +119,7 @@ body {
         padding: 55px;
         padding-left: 65px;
         padding-bottom: 140px;
-        border: 25px solid white;
+        border: 25px solid beige;
     
       
     #top-center {
@@ -120,17 +132,13 @@ body {
         bottom: 40%;
         right: 50%;
     }
-    
     }
-    h2 {
-    
-    }
+
   
     p {
-        color: #2d1a06;
-        font-size: 3em;
+        color: rgb(78, 1, 78);
         text-align: center;
-        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
     }
     #bakedGoodsPics {
         display: flex;
@@ -151,25 +159,30 @@ body {
         height: 400px;
         width: 550px;
     }
-  
+    #footer {
+        display: flex;
+        display: inline-block;
+        font-size: 0.5em;
     }
-    @media (min-width: 1025px){
-li {
-    display: inline;
     }
-body {
-    font-family: 'Domine', serif;
+@media (min-width: 1025px){
+
+    body {
+        font-family: 'Domine', serif;
         background-color: #2d1a06;
-        color: purple;
-        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        color: rgb(94, 33, 86);
+        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
         font-size: 3em;
         text-align: center;
     }
+    li {
+        display: inline;
+        }
     
     h1 {
         font-size: 4em;
         text-align: center;
-        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
     }
     
     .container {
@@ -181,7 +194,7 @@ body {
         padding: 55px;
         padding-left: 65px;
         padding-bottom: 140px;
-        border: 25px solid white;
+        border: 25px solid beige;
     
       
     #top-center {
@@ -204,7 +217,7 @@ body {
         color: #2d1a06;
         font-size: 3em;
         text-align: center;
-        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
     }
     #bakedGoodsPics {
         display: flex;
@@ -225,4 +238,10 @@ body {
         height: 400px;
         width: 550px;
     }
+    footer {
+        /* display: flex; */
+        /* display: inline-block; */
+        font-size: 0.75em;
+        justify-content: space-around;
     }
+    
