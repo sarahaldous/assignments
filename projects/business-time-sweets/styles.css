@@ -1,0 +1,228 @@
+@media (min-width: 320px) and (max-width: 568px) {
+li {
+        display: inline;
+      } 
+body {
+    font-family: 'Domine', serif;
+    background-color: #2d1a06;
+    color: purple;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 2em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.container {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 55px;
+    padding-left: 65px;
+    padding-bottom: 140px;
+    border: 25px solid white;
+
+  
+#top-center {
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+#bottom-center {
+    position: absolute;
+    bottom: 40%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+}
+h2 {
+
+}
+  
+p1 {
+    color: #2d1a06;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+#browniePic {
+    height: 400px;
+    width: 400px;
+}
+#cupcakePic {
+    height: 350px;
+    width: 500px;
+}
+#cookiePic {
+    height: 
+}
+#donutPic {
+    height: 400px;
+    width: 550px;
+}
+#bakedGoodsPics {
+    display: flex;
+    display: inline-block;
+}
+}
+/* font-family: 'Merriweather', serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Bitter', serif;
+font-family: 'Domine', serif;
+font-family: 'Jacques Francois', serif; */
+
+@media (min-width: 569px) and (max-width: 1024px) {
+    li {
+        display: inline;
+      }
+body {
+    font-family: 'Domine', serif;
+        background-color: #2d1a06;
+        color: purple;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    
+    .container {
+        height: 400px;
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 55px;
+        padding-left: 65px;
+        padding-bottom: 140px;
+        border: 25px solid white;
+    
+      
+    #top-center {
+        position: absolute;
+        top: 40%;
+        right: 50%;
+    }
+    #bottom-center {
+        position: absolute;
+        bottom: 40%;
+        right: 50%;
+    }
+    
+    }
+    h2 {
+    
+    }
+  
+    p {
+        color: #2d1a06;
+        font-size: 3em;
+        text-align: center;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    #bakedGoodsPics {
+        display: flex;
+        display: inline-block;
+    }
+    #browniePic {
+        height: 400px;
+        width: 400px;
+    }
+    #cupcakePic {
+        height: 350px;
+        width: 500px;
+    }
+    #cookiePic {
+        height: 
+    }
+    #donutPic {
+        height: 400px;
+        width: 550px;
+    }
+  
+    }
+    @media (min-width: 1025px){
+li {
+    display: inline;
+    }
+body {
+    font-family: 'Domine', serif;
+        background-color: #2d1a06;
+        color: purple;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 4em;
+        text-align: center;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    
+    .container {
+        height: 400px;
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 55px;
+        padding-left: 65px;
+        padding-bottom: 140px;
+        border: 25px solid white;
+    
+      
+    #top-center {
+        position: absolute;
+        top: 40%;
+        right: 50%;
+    }
+    #bottom-center {
+        position: absolute;
+        bottom: 40%;
+        right: 50%;
+    }
+    
+    }
+    h2 {
+    
+    }
+  
+    p1 {
+        color: #2d1a06;
+        font-size: 3em;
+        text-align: center;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    #bakedGoodsPics {
+        display: flex;
+        display: inline-block;
+    }
+    #browniePic {
+        height: 400px;
+        width: 400px;
+    }
+    #cupcakePic {
+        height: 350px;
+        width: 500px;
+    }
+    #cookiePic {
+        height: 
+    }
+    #donutPic {
+        height: 400px;
+        width: 550px;
+    }
+    }
