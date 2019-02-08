@@ -58,10 +58,10 @@ a {
     color: rgb(78, 1, 78);
 }
 p {
-    color: rgb(94, 33, 86);;
+    color: rgb(163, 99, 160);
     font-size: 1em;
     text-align: center;
-    text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
+    text-shadow: none;
 }
 #browniePic {
     height: 400px;
@@ -136,9 +136,9 @@ p {
 
   
     p {
-        color: rgb(78, 1, 78);
+        color: rgb(163, 99, 160);
         text-align: center;
-        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
+        text-shadow: none;
     }
     #bakedGoodsPics {
         display: flex;
@@ -213,11 +213,10 @@ p {
     
     }
   
-    p1 {
-        color: #2d1a06;
-        font-size: 3em;
+    p {
+        color: rgb(163, 99, 160);
         text-align: center;
-        text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
+        text-shadow: none;
     }
     #bakedGoodsPics {
         display: flex;
