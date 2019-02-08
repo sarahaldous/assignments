@@ -58,7 +58,7 @@ a {
     color: rgb(78, 1, 78);
 }
 p {
-    color: rgb(163, 99, 160);
+    color: rgb(128, 48, 117);
     font-size: 1em;
     text-align: center;
     text-shadow: none;
@@ -136,7 +136,7 @@ p {
 
   
     p {
-        color: rgb(163, 99, 160);
+        color: rgb(128, 48, 117);
         text-align: center;
         text-shadow: none;
     }
@@ -170,7 +170,7 @@ p {
     body {
         font-family: 'Domine', serif;
         background-color: #2d1a06;
-        color: rgb(94, 33, 86);
+        color: rgb(128, 48, 117);
         text-shadow: -1px 0 #D2B48C, 0 1px #D2B48C, 1px 0 #D2B48C, 0 -1px #D2B48C;
         font-size: 3em;
         text-align: center;
@@ -214,7 +214,7 @@ p {
     }
   
     p {
-        color: rgb(163, 99, 160);
+        color: rgb(128, 48, 117);
         text-align: center;
         text-shadow: none;
     }
