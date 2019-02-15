@@ -1,0 +1,38 @@
+*{
+    background-color: lightskyblue;
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+button {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    background-color: rgb(111, 250, 215);
+    border: solid 5px darkblue;
+    transition-property: all;
+    transition-duration: 1s;
+    outline: none;
+
+
+}
+
+button:hover {
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+    background-color: rgb(252, 201, 183);
+    width: 300px;
+    height: 200px;
+
+
+    
+}

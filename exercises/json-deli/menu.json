@@ -1,0 +1,68 @@
+{
+"title": "JSON's Deli",
+"menu": {
+    "appetizers": [
+        {
+        "name": "garlic fries",
+        "ingredients": ["garlic", "potatoes", "oil"],
+        "description": "delicious sliced potatoes fried with delicious garlic"
+        },
+        {
+        "name": "side salad",
+        "ingredients": ["lettuce", "tomatoes", "red onions", "cucumbers"],
+        "description": "super-healthy option with basically no calories, so you can eat more sandwich"
+        }
+    ],
+    "cold sandwiches": [
+        {
+        "name": "turkey breast",
+        "ingredients": ["bread", "turkey", "secret sauce"],
+        "description": "light and healthy turkey meat on bread with mysterious sauce"
+        },
+        {
+        "name": "roast beef",
+        "ingredients": ["bread", "roast beef", "mayonnaise"],
+        "description": "delicious roast beef on bread with mayonnaise"
+        }
+    ],
+    "hot sandwiches": [
+        {
+            "name": "reuben",
+            "ingredients": ["rye bread", "pastrami", "melty cheese"],
+            "description": "super good sandwich if you like cheese and beef"
+        },
+        {
+            "name": "french dip",
+            "ingredients": ["baguette", "roast beef", "cheese", "beef mushroom broth"],
+            "description": "another good option for people who like cheese and beef together"
+        }
+    ],
+   
+    "desserts": [
+        {
+        "name": "chocolate chip cookie",
+        "ingredients": ["chocolate chips", "dry ingredients", "eggs", "butter"],
+        "description": "delicious and perfectly baked cookies"
+        },
+        {
+        "name": "brownie",
+        "ingredients": ["cocoa powder", "butter", "flour", "eggs", "etc"],
+        "description": "very delicious, chocolatey treat"
+        }
+    ],
+    
+    "drinks": [
+        {
+        "name": "chocolate milk",
+        "ingredients": ["chocolate", "milk"],
+        "description": "milk with chocolate added to it"
+        },
+        {
+        "name": "soft drinks",
+        "ingredients": ["water", "sugar", "tiny amounts of flavor", "bubbles"],
+        "description": "get your own at the dispenser. you'll see the options when you get there."
+        }
+    ]
+}
+}
+   
