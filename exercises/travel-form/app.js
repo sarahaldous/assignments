@@ -27,3 +27,4 @@ form.addEventListener("submit", function(e){
 // console.log("Gender: " + result)
 // console.log("Destination: " + result)
 // consolelog("Dietary Restrictions: " + result)
+

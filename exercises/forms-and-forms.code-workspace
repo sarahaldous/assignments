@@ -7,5 +7,7 @@
 			"path": "/Users/student/Downloads/forms-pt2-notes"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "simple-html-calculator"
+	}
 }

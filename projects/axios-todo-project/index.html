@@ -9,15 +9,31 @@
 </head>
 <body>
     <h1>To Do List</h1>
-    <div>
+    <div id="todo-div">
         
-        <form name="todo-form">
-            <input name="title">
+        <form id="todo-form" name="todo-form">
+            <input type="text" id="title" name="title" placeholder="To-Do Item">
+            <input type="text" name="description" name="description" placeholder="Description">
+            <input type="text" name="priority-level" placeholder="Priority Level">
+            <input type="text" name="price" id="price">
+            <input type="img" id="imgUrl" name="imgURl">
+            <input type="num">
+            <div id="location">        Where would you like to go?
+                    <select id="selector">
+                        <option value = "thailand" >Thailand</option>
+                        <option value = "bali" >Bali</option>
+                        <option value = "greece" >Greece</option>
+                        <option value = "germany" >Germany</option>
+                        <option value = "portugal" >Portugal</option>
+                        <option value = "spain" >Spain</option>
+                    </select>
+                </div>
             <button>Submit To-Do Item</button>
           
         </form>
-        <div id="todolist-container"></div>
+       
     </div>
+    <div id="todolist-container"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="app.js"></script>
 </body>

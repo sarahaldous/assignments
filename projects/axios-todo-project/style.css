@@ -5,3 +5,23 @@
     text-align: center;
     font-size: 4 em;
 }
+#todo-div {
+    display: flex;
+    justify-content: center;
+
+}
+
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.todoContainer {
+    border: black 1px solid;
+}
+.todoContainer h1 {
+
+}
+.todoContainer img {
+    
+}
