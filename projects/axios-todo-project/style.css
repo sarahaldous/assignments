@@ -18,10 +18,33 @@
 }
 .todoContainer {
     border: black 1px solid;
-}
-.todoContainer h1 {
+    
 
 }
 .todoContainer img {
-    
+    height: 140px;
+    width: 140px;
+}
+.todoContainer h1 {
+    background-color:  rgb(0, 100, 67);
+    color: gray;
+    text-shadow: -1px 0 black, 0 1px black, 1 px 0 black, 0 -1px black;
+}
+.todoContainer img {
+    background-color: blue;
+}
+
+.todoContainer input {
+    width: 100px;
+}
+.todoContainer button {
+    background-color: rgb(100, 93, 187);
+}
+#submitBtn {
+    background-color: rgb(0, 100, 67);
+    color: gray;
+}
+#imgUrl {
+    height: 10px;
+    width: 15px;
 }

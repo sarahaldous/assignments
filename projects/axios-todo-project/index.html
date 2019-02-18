@@ -14,21 +14,18 @@
         <form id="todo-form" name="todo-form">
             <input type="text" id="title" name="title" placeholder="To-Do Item">
             <input type="text" name="description" name="description" placeholder="Description">
-            <input type="text" name="priority-level" placeholder="Priority Level">
-            <input type="text" name="price" id="price">
-            <input type="img" id="imgUrl" name="imgURl">
-            <input type="num">
-            <div id="location">        Where would you like to go?
-                    <select id="selector">
-                        <option value = "thailand" >Thailand</option>
-                        <option value = "bali" >Bali</option>
-                        <option value = "greece" >Greece</option>
-                        <option value = "germany" >Germany</option>
-                        <option value = "portugal" >Portugal</option>
-                        <option value = "spain" >Spain</option>
+            <input type="img" id="imgUrl" name="imgUrl" placeholder="Image Link">
+            <div id="price">        Priority Level 1-5 (1 is highest)
+                    <select id="priorityLevel" name="price">
+                        <option value = "1" >1</option>
+                        <option value = "2" >2</option>
+                        <option value = "3" >3</option>
+                        <option value = "4" >4</option>
+                        <option value = "5" >5</option>
+                        
                     </select>
                 </div>
-            <button>Submit To-Do Item</button>
+            <button id="submitBtn">Submit To-Do Item</button>
           
         </form>
        
