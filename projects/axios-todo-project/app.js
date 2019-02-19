@@ -49,6 +49,7 @@ function listTodos(todos){
         todoContainer.classList.add("todoContainer")
         description.textContent = todos[i].description
         imgUrl.setAttribute('src', todos[i].imgUrl)
+        imgUrl.onerror = function(){this.style.display='none';};
         price.textContent = todos[i].price
         checkbox.type = "checkbox"
         checkbox.checked = todos[i].completed

@@ -1,45 +1,117 @@
-* {
-    margin: 0;
-    font-family: Libre Baskerville', sans-serif;
-    background-color: white;
+@media (max-width: 400px){
+    * {
+        margin: 0;
+       
+        
+    }
+    @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400i');
+    div {
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.466);
+    }
+    #top {
+        display: grid;
+        grid-template-rows: 10px auto 70px;
+        font-size: 20px;
+        background-image: url("resources/gridlines-opaque.png"), url("resources/contours.png"), url("resources/huntington.jpg");
+        background-repeat: repeat, repeat, no-repeat;
+        /* display: flex; */
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        color: whitesmoke;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+    }
+    #top > div:nth-child(1){
+        grid-row: 1;
+    }
+    #top > div:nth-child(2){
+        grid-row: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #top > div:nth-child(2) > p {
+        font-style: italic;
+        color: rgba(245, 245, 245, 0.541);
+        font-size: .75em;
+    }
+    #swirlImage img {
+        padding-top: 30px;
+        height: 50px;
+        width: 50px;
+    }
+    #viewAll {
+        grid-row: 3;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 0.247);
+    }
+    #viewAll p {
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: narrow; 
+        font-size: .80em;
+        color: rgba(245, 245, 245, 0.644);
+        align-items: center;
+    }
+    #container {
+        display: grid;
+        grid-template-columns: 1fr
+    }
+    #container h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        text-transform: uppercase;
+        
+    }
+    h3 {
+        font-family: 'Julius Sans One', sans-serif;
+    }
+
+    span {
+        text-decoration-style: dotted;
+    }
+  
+    
+    #left {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        font-size: 13px;
+        line-height: 25px;
+        background-color: whitesmoke;
+        color: rgb(97, 97, 97);
+        font-style: lighter;
+    }
+    
+    #bottom {
+        height: 50px;
+        background-color: violet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #left {
+        padding: 10px, 5px;
+    }
+    p {
+        font-family: 'Libre Baskerville', serif;
+        margin: 20px;
+    }
 }
 
-#container {
-    display: grid;
-    grid-template-columns: 1fr
-}
-h1, h3 [
-    font-family: Julius Sans One', sans-serif;
-]
-#top {
-    font-size: 20px;
-    background-color: dodgerblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    font-family: Julius Sans One', sans-serif;
-}
 
-#left {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-color: darkkhaki
-}
-
-#bottom {
-    height: 50px;
-    background-color: violet;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#left {
-    padding: 10px, 5px;
-}
-
-@media only screen and (max-width: 420px){
+/* @media only screen and (max-width: 420px){
     .vanish{
         display: none;
     }
@@ -67,4 +139,4 @@ h1, h3 [
     #left {
         grid-column: 1 / 3;
     }
-}
+} */

@@ -1,0 +1,8 @@
+* {
+    color: black;
+    text-shadow: 2px white 2px white 2px white 2px white;
+}
+
+.div-container {
+    background-image: url("https://images.unsplash.com/photo-1550544910-8f26817ba35d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60");
+}

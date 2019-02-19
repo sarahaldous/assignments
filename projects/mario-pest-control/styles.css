@@ -90,9 +90,12 @@ footer {
     margin-top: 50px;
     margin-bottom: 20px;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-} */
-.sumOutput {
-    
+}
+#sum {
+    font-size: 3em;
+    color: rgb(109, 230, 84);
+    text-shadow: -2px 0 navy, 0 2px navy, 2px 0 navy, 0 -2px navy;
+    text-align: center;
 }
 .row {
     display: flex;
