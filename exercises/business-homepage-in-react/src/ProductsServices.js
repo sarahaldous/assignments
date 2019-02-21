@@ -12,3 +12,4 @@ function ProductsServices(){
         </div>
     )
 }
+export default ProductsServices;
