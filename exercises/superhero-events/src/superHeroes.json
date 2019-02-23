@@ -1,0 +1,34 @@
+{
+    "superHeroes": [
+        {
+            "name": "SpiderMan",
+            "imgUrl": "https://i.ytimg.com/vi/_Sn5x1aLrUY/maxresdefault.jpg",
+            "catchPhrase": "It's your Friendly Neighborhood Spider-Man!"
+        },
+        {
+            "name": "CaptainAmerica",
+            "imgUrl": "https://cdn.britannica.com/s:500x350/30/182830-004-61C7794A.jpg",
+            "catchPhrase": "Avengers Assemble!"
+        },
+        {
+            "name": "Iron Man",
+            "imgUrl": "https://static1.squarespace.com/static/583c906ebe659429d1106265/t/5935941859cc687293cd3f6b/1496683572683/",
+            "catchPhrase": "I have so much money"
+        },
+        {
+            "name": "Black Widow",
+            "imgUrl": "https://static1.squarespace.com/static/51b3dc8ee4b051b96ceb10de/t/5bea011740ec9a97ddd3b6fe/1542062361805/?format=2500w",
+            "catchPhrase": "I've got red in my ledger; I'd like to wipe it out."
+        },
+        {
+            "name": "The Hulk",
+            "imgUrl": "https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/06/15/Pictures/_1caf1900-7098-11e8-bbf6-b72314b60444.jpg",
+            "catchPhrase": "HULK SMASH"
+        },
+        {
+            "name": "Wonder Woman",
+            "imgUrl": "https://i.kinja-img.com/gawker-media/image/upload/s--RBXdTEOk--/c_scale,f_auto,fl_progressive,q_80,w_800/jfbyksachdc03lyhp57f.png",
+            "catchPhrase": "I will fight — for those who cannot fight for themselves."
+        }
+    ]
+}

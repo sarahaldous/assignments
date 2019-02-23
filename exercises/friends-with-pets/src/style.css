@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    margin-top: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+#whole-thing {
+    background-color: rgba(0, 128, 128, 0.445);
+    border: 5px solid black;
+    
+   
+}
+#title{
+    margin-top: 20px;
+    background-color: rgba(82, 65, 82, 0.507);
+    text-align: center;
+
+}
+.names {
+    background-color: darkcyan;
+}
+.friend-container {
+    background-color: teal;
+    border: 5px solid rgba(0, 0, 0, 0.308);
+    
+}
+.pet-name {
+    background-color: rgba(255, 255, 255, 0.233);
+}
+.pet-breed {
+    
+    background-color: rgba(0, 0, 0, 0.137);
+}
