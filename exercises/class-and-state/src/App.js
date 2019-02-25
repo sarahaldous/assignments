@@ -17,21 +17,21 @@ class App extends React.Component {
                 }
             })
         }
-        handleDecrement = ()=> {
+        handleDecrement = () => {
             this.setState(prevState => {
                 return {
                     counter: prevState.counter - 1
                 }
             })
         }
-        handleDivideBy2 = ()=> {
+        handleDivideBy2 = () => {
             this.setState(prevState => {
                 return {
                     counter: prevState.counter / 2
                 }
             })
         }
-        handleMultBy2 = ()=> {
+        handleMultBy2 = () => {
             this.setState(prevState => {
                 return {
                     counter: prevState.counter * 2
@@ -52,4 +52,4 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default App;

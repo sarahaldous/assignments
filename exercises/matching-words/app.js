@@ -6,5 +6,7 @@ function myFunction() {
 myFunction()
 
 function findRepeats(){
-    
+    for (var i = 0; i < res.length; i++){
+        
+    }
 }

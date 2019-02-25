@@ -5,11 +5,13 @@ import './style.css'
 import PropTypes from 'prop-types'
 
 class App extends React.Component {
-    
+    alertCatchPhrase = (catchPhrase) => {
+        alert(catchPhrase)
+    }
     render(){
         const mappedSuperHeroes = data.superHeroes.map((superHero, i) => {
         return (
-            <SuperHero name={superHero.name} imgUrl={superHero.imgUrl} catchPhrase={superHero.catchPhrase}/>
+            <SuperHero name={superHero.name} imgUrl={superHero.imgUrl} catchPhrase={superHero.catchPhrase} alertCatchPhrase={this.alertCatchPhrase}/>
         )
         })
         return (

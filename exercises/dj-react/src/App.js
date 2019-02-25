@@ -58,7 +58,7 @@ class App extends React.Component {
    render(){
        const style = {
            display: "grid",
-           gridTemplateColumns: "repeat(2, 1fr)"
+           grid-template-columns: "repeat(2, 1fr)"
            
        }
        const boxStyle1 = {
