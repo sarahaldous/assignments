@@ -5,7 +5,7 @@ function BlogPost(props){
         <div>
             <h1>{BlogPost.title}</h1>
             <h3>{BlogPost.subtitle}</h3>
-            <p>Posted by {BlogPost.author} on {blogPost.date}</p>
+            <p>Posted by {BlogPost.author} on {BlogPost.date}</p>
         </div>
     )
 }

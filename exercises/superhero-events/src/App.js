@@ -11,7 +11,12 @@ class App extends React.Component {
     render(){
         const mappedSuperHeroes = data.superHeroes.map((superHero, i) => {
         return (
-            <SuperHero name={superHero.name} imgUrl={superHero.imgUrl} catchPhrase={superHero.catchPhrase} alertCatchPhrase={this.alertCatchPhrase}/>
+            <SuperHero 
+                key={i} 
+                name={superHero.name} 
+                imgUrl={superHero.imgUrl} 
+                catchPhrase={superHero.catchPhrase} 
+                alertCatchPhrase={this.alertCatchPhrase}/>
         )
         })
         return (
