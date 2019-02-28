@@ -1,0 +1,35 @@
+body {
+    background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/gray-paper-background-9.jpg");
+    background-size: cover;
+    
+}
+header {
+    background-color: black;
+    color: red;
+}
+.wanted-posters {
+    padding-top: 50px;
+    padding-left: 90px;
+    display: inline-flex;
+    flex-direction: column;
+    
+}
+
+.mug-shots {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0px;
+}
+.name {
+    background-color: rgba(0, 0, 128, 0.452);
+    
+}
+.Don-Corleone {
+    height: 100px;
+    width: 150px;
+}

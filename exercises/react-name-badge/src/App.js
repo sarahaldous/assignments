@@ -1,5 +1,6 @@
 import React from 'react'
 import Badge from './Badge'
+import NameBadgeList from './NameBadgeList.js'
 import Form from './Form.js'
 
 class App extends React.Component {
@@ -54,19 +55,24 @@ class App extends React.Component {
         }
     }
     render(){
+        const { firstName, lastName, phone, birthplace, email, favFood, info, nameBadges } = this.state
         return (
             <div>
-                <Form   firstName={this.state.firstName}
-                        lastName={this.state.lastName}
-                        email={this.state.email}
-                        birthplace={this.state.birthplace}
-                        phone={this.state.phone}
-                        favFood={this.state.favFood}
-                        info={this.state.info} 
+                <Form   firstName={firstName}
+                        lastName={lastName}
+                        email={email}
+                        birthplace={birthplace}
+                        phone={phone}
+                        favFood={favFood}
+                        info={info} 
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
                         nameBadges={this.state.nameBadges}/>
-                        
+                        {/* Short form that would also work: 
+                        <Form 
+                        handleSubmit={this.handleSubmit}
+                        handleChange={this.handleChange}/>
+                         */}
                 <Badge nameBadges={this.state.nameBadges}/>
                 
                 </div>
