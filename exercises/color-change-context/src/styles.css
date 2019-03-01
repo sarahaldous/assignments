@@ -1,0 +1,57 @@
+* {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Amatic SC', cursive;
+}
+header p {
+    display: grid;
+    justify-content: space-around;
+}
+.header-light {
+    background-color: turquoise;
+}
+.header-dark {
+    /* background-color: purple; */
+   
+}
+.home-light {
+    background-color: gray;
+    background: url("https://images-na.ssl-images-amazon.com/images/I/81VHFWpxvcL._SL1500_.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.home-light p {
+    background-color: rgba(0, 128, 128, 0.493);
+}
+.home-dark {
+    background-color: black;
+    background: url("https://techcrunch.com/wp-content/uploads/2010/10/pirate.jpg?w=730&crop=1");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.home-dark p {
+    background-color: rgba(255, 0, 255, 0.534);
+    
+}
+.buttonDiv {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.button-dark {
+    background-color: purple;
+}
+.button-light {
+    background-color: turquoise;
+}
+footer {
+    display: grid;
+    justify-content: center;
+}
+.footer-light {
+    background-color: teal;
+}
+.footer-dark {
+    background-color: magenta;
+}
