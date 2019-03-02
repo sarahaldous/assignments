@@ -3,15 +3,16 @@
     text-shadow: 2px 2px 2px black;
     font-family: 'Amatic SC', cursive;
 }
-header p {
-    display: grid;
-    justify-content: space-around;
-}
+
 .header-light {
     background-color: turquoise;
+    display: flex;
+    justify-content: space-around;
 }
 .header-dark {
-    /* background-color: purple; */
+    background-color: purple;
+    display: flex;
+    justify-content: space-around;
    
 }
 .home-light {

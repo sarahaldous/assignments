@@ -1,7 +1,7 @@
 import React from 'react'
 
 const AddTodoForm = (props) => {
-    const{ title, description, price, handleChange, handleSubmit } = props
+    const{ title, description, price, handleChange, handleSubmit, btnText } = props
     return (
         <form onSubmit={handleSubmit}>
             <input 
@@ -18,13 +18,13 @@ const AddTodoForm = (props) => {
                 type="text" 
                 name="number" 
                 value={price} 
-                onChange={handleChange}
+                onChange={handleChange}/>
             <input 
                 type="text" 
                 name="imgUrl" 
                 value={imgUrl} 
                 onChange={handleChange}
-                placeholder: "Image Url"/>
+                placeholder= "Image Url"/>
         </form>
     )
 }

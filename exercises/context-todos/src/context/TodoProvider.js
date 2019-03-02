@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import axios from 'axios'
 
 const TodoContext = React.createContext()
 
@@ -22,7 +23,8 @@ class TodoProvider extends Component {
             getTodos: this.getTodos
         }
         return (
-            <TodoContext.Provider>
+            <TodoContext.Provider
+                value={props}>
                 {this.props.children}
             </TodoContext.Provider>
 
@@ -31,7 +33,7 @@ class TodoProvider extends Component {
 }
 export const withTodos = C => props => (
     <TodoContext.Consumer>
-        {value => <C {...props}{...value}/>}
+        {value => <C {...props} {...value}/>}
     </TodoContext.Consumer>
 )
 export default TodoProvider
