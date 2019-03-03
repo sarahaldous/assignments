@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-
+import UglyThingList from './components/UglyThingList.js'
+import AddUglyThingForm from './components/AddUglyThingForm.js'
 import './styles.css'
 import {withUglyThings} from './context/UglyThingsProvider.js'
 
@@ -30,7 +31,7 @@ class App extends Component {
     }
     render(){
         return (
-            <div>
+            <div className="app-container">
                 <h1>Ugly Things. So, So Ugly.</h1>
                 <AddUglyThingForm
                     handleChange={this.handleChange}
@@ -38,8 +39,8 @@ class App extends Component {
                     title={this.state.title}
                     description={this.state.description}
                     imgUrl={this.state.imgUrl}
-                    btnText="Add Ugly Thing" />
-                <EditUglyThings 
+                    btnText="Add Another Ugly Thing" />
+                <UglyThingList
                     uglyThings={this.props.uglyThings}
                     handleDelete={this.props.handleChange}
                     handleEdit={this.props.handleEdit}/>

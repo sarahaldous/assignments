@@ -53,14 +53,15 @@ class UglyThingsProvider extends Component {
                     addUglyThing: this.addUglyThing,
                     handleDelete: this.handleDelete,
                     handleEdit: this.handleEdit
-                }}
-                {/UglyThingsContext.Provider}
-                 )
-            }
-    
+                }}>
+                {this.props.children}
+                </UglyThingsContext.Provider>
+        )
+    }
 }
 export const withUglyThings = C => props (
     <UglyThingsContext.Consumer>
         {value => <C {...props} {...value} /> }
     </UglyThingsContext.Consumer>
-)export devault UglyThingsProvider
+)
+export default UglyThingsProvider
