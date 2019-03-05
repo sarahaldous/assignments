@@ -1,0 +1,22 @@
+.uglyThingsDiv {
+    height: 400px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title {
+    text-shadow: 2px 2px 2px white;
+}
+.description {
+    background-color: rgba(0, 0, 128, 0.466);
+    color: white;
+    text-shadow: 2px 2px black;
+    
+}
+.delBtn {
+    background-color: cornflowerblue;
+}
+.toggler {
+    background-color: navy;
+    color: white;
+}

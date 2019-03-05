@@ -4,6 +4,7 @@ import AddUglyThingForm from './components/AddUglyThingForm.js'
 import './styles.css'
 import {withUglyThings} from './context/UglyThingsProvider.js'
 
+
 class App extends Component {
     constructor(){
         super()
@@ -42,11 +43,12 @@ class App extends Component {
                     btnText="Add Another Ugly Thing" />
                 <UglyThingList
                     uglyThings={this.props.uglyThings}
-                    handleDelete={this.props.handleChange}
+                    handleDelete={this.props.handleDelete}
                     handleEdit={this.props.handleEdit}/>
             </div>
         )
     }
 }
 
+// export default withUglyThings(App)
 export default withUglyThings(App)

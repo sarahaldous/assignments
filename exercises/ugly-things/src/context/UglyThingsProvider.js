@@ -7,14 +7,14 @@ class UglyThingsProvider extends Component {
     constructor(){
         super()
         this.state = {
-            todos: []
+            uglyThings: []
         }
         this.url = "https://api.vschool.io/sarah/todo"
     }
     getUglyThings = () => {
         axios.get(this.url).then(response => {
             this.setState({
-                todos: response.data
+                uglyThings: response.data
             })
         })
         .catch(error => console.log(error))
@@ -27,18 +27,18 @@ class UglyThingsProvider extends Component {
         axios.post(this.url, newUglyThing).then(response => {
             this.setState(prevState => {
                 return {
-                    todos: [response.data, ...prevState.uglyThings]
+                    uglyThings: [response.data, ...prevState.uglyThings]
                 }
             })
         }).catch(error => console.log(error))
     }
-    handleDelete = (_id, updates) => {
-        axios.put(`${this.url}/${_id}`, updates)
+    handleDelete = _id => {
+        axios.delete (`${this.url}/${_id}`)
             .then(response => {
                 const updatedUglyThing = response.data
                 this.setState(prevState => {
                     return {
-                        uglyThings: prevState.uglyThings.map(uglyThing => uglyThing._id === _id ? updatedUglyThing : uglyThing)
+                        uglyThings: prevState.uglyThings.filter(uglyThing => uglyThing._id !== _id)
 
                     }
                 })
@@ -52,14 +52,14 @@ class UglyThingsProvider extends Component {
                     getUglyThings: this.getUglyThings,
                     addUglyThing: this.addUglyThing,
                     handleDelete: this.handleDelete,
-                    handleEdit: this.handleEdit
+                    handleEdit: this.handleEdit,
                 }}>
                 {this.props.children}
                 </UglyThingsContext.Provider>
         )
     }
 }
-export const withUglyThings = C => props (
+export const withUglyThings = C => props => (
     <UglyThingsContext.Consumer>
         {value => <C {...props} {...value} /> }
     </UglyThingsContext.Consumer>

@@ -31,27 +31,28 @@ class UglyThing extends Component {
         this.toggler()
     }
     render(){
-        const {title, description, imgUrl, handleDelete, _id} = this.props
+        const {title, description, imgUrl, handleDelete, id} = this.props
+        // console.log(this.props.id)
         return (
         <div>
             { !this.state.isToggled
-                ?   <div className="uglyThingsDiv" style={{ backgroundImage: `url(${imgUrl})`}}>
-                        <h1>{title}</h1>
-                        <h3>{description}</h3>
-                        <button onClick={() => handleDelete(_id)}>Get This Ugly Thing Out of My Face!</button>
-                        <button onClick={this.toggler}>Edit</button>
-                        </div>
-                    :
-                        <div className="editUglyThingsDiv">
-                            <AddUglyThingForm
-                                {...this.state}
-                                btnText="Submit Edit"
-                                handleChange={this.handleChange}
-                                handleSubmit={this.handleSubmit}
-                                />
-                                <button onClick={this.toggler}>Close</button>
-                                </div>
-                }
+            ?   <div className="uglyThingsDiv" style={{ backgroundImage: `url(${imgUrl})`}}>
+                    <h1 className="title">{title}</h1>
+                    <h3 className="description">{description}</h3>
+                    <button className="delBtn" onClick={() => handleDelete(id)}>Get This Ugly Thing Out of My Face!</button>
+                    <button className="toggler" onClick={this.toggler}>Edit</button>
+                </div>
+            :
+                <div className="editUglyThingsDiv">
+                    <AddUglyThingForm
+                        {...this.state}
+                        btnText="Submit Edit"
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit}
+                        />
+                    <button onClick={this.toggler}>Close</button>
+                </div>
+            }
             </div>
         )
     }
