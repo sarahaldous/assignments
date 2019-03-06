@@ -28,11 +28,11 @@ const Form = (props) => {
                         placeholder="Place of Birth"/>
                 <input type="tel"
                         name="phone"
-                        maxLength="9"
+                        maxLength="10"
                         value={props.phone}
                         onChange={props.handleChange}
                         placeholder="Phone"/>
-                <input type="text"
+                <input  type="text"
                         name="favFood"
                         value={props.favFood}
                         onChange={props.handleChange}
