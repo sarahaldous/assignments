@@ -1,7 +1,7 @@
-import React from 'react'
-import Ground from './Ground.js'
-import Earth from './Earth.js'
-import Galaxy from './Galaxy.js'
+import React, {Component} from 'react'
+import Ground from './components/Ground.js'
+import Earth from './components/Earth.js'
+import Galaxy from './components/Galaxy.js'
 import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -9,11 +9,12 @@ class App extends Component {
         return (
             <div>
                 <nav></nav>
-                <Switch>
+                {/* <Switch>
                     <Route exact path='/' component={Earth} />
                     <Route path='/' component={Ground} />
                     <Route path='/' component={Galaxy} />
-                </Switch>
+                </Switch> */}
+                <Galaxy />
             </div>
         )
     }
