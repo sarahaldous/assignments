@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import axios from 'axios'
-import nasa from process.env.REACT_APP_NASA_KEY
+// import axios from 'axios'
+const nasa = (process.env.REACT_APP_NASA_KEY)
+const axios = require('axios')
 
 const SpaceContext = React.createContext()
 
@@ -8,22 +9,41 @@ class SpaceProvider extends Component {
     constructor(){
         super()
         this.state = {
-            galaxyImgUrl: "",
-            earthImgUrl: "",
-            groundImgUrl: ""
+            // galaxyImgUrl: "",
+            date:'',
+            explanation:'',
+            hdurl: '',
+            title: '',
+            url: '',
+            infoDisplayed: false
+            
         }
     }
     getGalaxyData = () => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${nasa}`).then(function(response){
-    
-            console.log(response.data.url)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${nasa}`).then((response) => {
+            const {
+                date,
+                explanation,
+                hdurl,
+                title,
+                url
+            } = response.data
+            this.setState({
+                date,
+                explanation,
+                hdurl,
+                title,
+                url
+            })
+            console.log(this.state)
+            
         }).catch(function(error){
             console.log(error)
         })
         
     }
     // getEarthData = () => {
-    //     axios.get("url").then(function(response){
+    //     axios.get(`https://api.nasa.gov/EPIC/api/enhanced/all?api_key=${nasa}`).then(function(response){
             
     //         console.log(response.data)
     //     }).catch(function(error){
@@ -31,34 +51,30 @@ class SpaceProvider extends Component {
     //     })
     // }
     
-    
+    // earthImgUrl: "",
+    // groundImgUrl: ""
+    infoToggler = () => {
+        this.setState({infoDisplayed: !this.state.infoDisplayed})
+    }
 
     render(){
+        console.log(this.state)
         return (
             <SpaceContext.Provider
                 value={{
-                    galaxyImgUrl: this.state.galaxyImgUrl,
-                    earthImgUrl: this.state.earthImgUrl,
-                    groundImgUrl: this.state.groundImgUrl,
-                    getGalaxyData: this.getGalaxyData
+                    ...this.state,
+                    getGalaxyData:this.getGalaxyData,
+                    infoToggler:this.infoToggler
                 }}>
                 {this.props.children}
                 </SpaceContext.Provider>
         )
     }
-
-
-
-
-
-
 }
 
-
-
-
-
-
+        
+       
+        
 export const withSpace = C => props => (
     <SpaceContext.Consumer>
         {value => <C {...props} {...value} />}

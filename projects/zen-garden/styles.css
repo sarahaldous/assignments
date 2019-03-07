@@ -1,17 +1,18 @@
 @media (max-width: 400px){
     * {
         margin: 0;
-       
+       display: grid;
         
     }
-    @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400i');
-  
-}
-    #top {
-        border-top: 10px solid rgba(0, 0, 0, 0.733);
+    #title {
+        font-display: center;
+        /* space-above: 1px; */
+    }
+    #div1 {
+        border-top: 10px solid rgb(2, 63, 58);
         display: grid;
         grid-template-rows: 10px auto 70px;
-        font-size: 20px;
+        font-size: 25px;
         background-image: url("resources/gridlines-opaque.png"), url("resources/contours.png"), url("resources/huntington.jpg");
         background-repeat: repeat, repeat, no-repeat;
         /* display: flex; */
@@ -26,32 +27,38 @@
         width: 100%;
     }
     #swirlImage img {
-        padding-top: 190px;
-        padding-bottom: 20px;
+        padding-top: 170px;
+        padding-bottom: 05px;
         height: 50px;
         width: 50px;
     }
     h2 {
+        /* justify-content: center; */
+        /* position: absolute; */
+        top: 20px;
         grid-row: 1;
         font-size: 1.13em;
         font-family: 'Julius Sans One', sans-serif;
     }
     h6 {
-
+        color: rgba(255, 255, 255, 0.534);
         grid-row: 2;
         width: 100%;
         height: 60px;
         display: flex;
-        flex-direction: column;
         position: absolute;
-        top: 200px;
+        top: 130px;
         justify-content: center;
         font-style: italic;
     }
-    #viewAll {
+    span {
+        border-bottom: 2px dotted;
+    }
+    #div2 {
         color: rgba(245, 245, 245, 0.541);
-        font-size: .75em;
+        font-size: 1.1em;
         grid-row: 3;
+        width: 100vw;
         height: 70px;
         display: flex;
         align-items: center;
@@ -59,9 +66,9 @@
         background-color: rgba(255, 255, 255, 0.247);
     }
   
-    #viewAll {
-        
-    }
+   #exampleFiles {
+       display: none;
+   }
     #viewAll p {
         font-family: 'Julius Sans One', sans-serif;
         font-weight: narrow; 
@@ -69,6 +76,7 @@
         color: rgba(245, 245, 245, 0.644);
         align-items: center;
         font-style: normal;
+        margin: 0;
     }
     #container {
         display: grid;
@@ -82,15 +90,9 @@
     h3 {
         font-family: 'Julius Sans One', sans-serif;
         font-size: 1.5em;
-        padding: 10px;
+        padding: 05px;
     }
-
-    span {
-        border-bottom: 2px dotted;
-    }
-  
-    
-    #left {
+    #div3 {
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -100,9 +102,8 @@
         color: rgb(58, 57, 57);
         font-style: lighter;
     }
-    
     #bottom {
-        height: 50px;
+        height: 20px;
         background-color: violet;
         display: flex;
         justify-content: center;
@@ -115,14 +116,40 @@
         font-family: 'Libre Baskerville', serif;
         margin: 20px;
     }
+    #div4 > h5 {
+        color: white;
+    }
+    #div5 {
+        background-image: url("resources/bamboo.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #div6 {
+        color: white;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400i');
 }
+    
+   
+  
+    
 
 
-/* @media only screen and (max-width: 420px){
+
+/* @media only screen and (min-width: 401px){
     .vanish{
         display: none;
     }
-}
+    body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+    #div1 {
+        grid-column: 1 / 3;
+        grid-column: 1 / span 2;
+
 @media only screen and (min-width: 700px){
     #container {
         display: grid;
