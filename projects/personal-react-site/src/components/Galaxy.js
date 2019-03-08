@@ -6,28 +6,20 @@ class Galaxy extends Component {
         super()
             this.state={
                 title:false,
-                hdToggle:false,
+                
             }
     }
     componentDidMount(){
         this.props.getGalaxyData()
     }
-    hdToggler = () => {
-        this.setState(prevState => ({
-            hdToggle: !prevState.hdToggle
-        }))
-    }
+   
 
     render(){
         
     
     console.log(this.props)
     return (
-        <div style={{backgroundImage: this.state.hdToggle ? `url(${this.props.hdurl})` : `url(${this.props.url})`}} id="galaxy-div">
-           <div className="buttonBox">
-           <button className="HDImgBtn" onClick={this.hdToggler}>View in HD</button>
-            <button onClick={this.props.infoToggler} className="HDImgBtn">More Info</button>
-            </div>
+        <div className="galaxyContainer" >
            { this.props.infoDisplayed ? 
            <div>
            <h3 className="galaxyTitle">{this.props.title}</h3>
@@ -42,13 +34,6 @@ class Galaxy extends Component {
             :
             null
            }
-          
-          
-           
-            {/* <img  src={this.props.url}/> */}
-            {/* style={} onClick="" */}
-            
-           
         </div>
     )
 }

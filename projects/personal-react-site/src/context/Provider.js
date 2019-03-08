@@ -15,8 +15,9 @@ class SpaceProvider extends Component {
             hdurl: '',
             title: '',
             url: '',
-            infoDisplayed: false
-            
+            infoDisplayed: false,
+            hdToggle:false,
+            menuShowing: false,
         }
     }
     getGalaxyData = () => {
@@ -42,19 +43,34 @@ class SpaceProvider extends Component {
         })
         
     }
-    // getEarthData = () => {
-    //     axios.get(`https://api.nasa.gov/EPIC/api/enhanced/all?api_key=${nasa}`).then(function(response){
+    getEarthData = () => {
+        axios.get(`https://api.nasa.gov/EPIC/api/enhanced/all?api_key=${nasa}`).then((response ) => {
+            const {
+                caption,
+                image,
+                date
+            }
             
-    //         console.log(response.data)
-    //     }).catch(function(error){
-    //         console.log(error)
-    //     })
-    // }
+            console.log(response.data)
+        }).catch(function(error){
+            console.log(error)
+        })
+    }
     
     // earthImgUrl: "",
     // groundImgUrl: ""
     infoToggler = () => {
         this.setState({infoDisplayed: !this.state.infoDisplayed})
+    }
+    hdToggler = () => {
+        this.setState(prevState => ({
+            hdToggle: !prevState.hdToggle
+        }))
+    }
+    menuToggler = () => {
+        this.setState(prevState => ({
+            menuShowing: !prevState.menuShowing
+        }))
     }
 
     render(){
@@ -64,7 +80,9 @@ class SpaceProvider extends Component {
                 value={{
                     ...this.state,
                     getGalaxyData:this.getGalaxyData,
-                    infoToggler:this.infoToggler
+                    infoToggler:this.infoToggler,
+                    hdToggler:this.hdToggler,
+                    menuToggler:this.menuToggler
                 }}>
                 {this.props.children}
                 </SpaceContext.Provider>
