@@ -20,7 +20,7 @@ class Earth extends Component {
 
         
     return (
-        <div className="earthContainer" style={{backgroundImage: `url(${this.props.image})`}} id="earth-div">
+        <div className="earthContainer" style={{backgroundImage: `url(${(this.props.randomEarthPhoto())})`}} id="earth-div">
         
         </div>
     )

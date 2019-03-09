@@ -21,8 +21,8 @@ class Ground extends Component {
     console.log(this.props.selectedArticle)
     console.log(this.props)
     return (
-        <div className="groundContainer" style={{backgroundImage: this.props.selectedArticle.imgUrl }} id="ground-div">
-           { this.props.infoDisplayed ? 
+        <div className="groundContainer" style={{backgroundImage: `url(${this.props.selectedArticle.urlToImage}` }}>
+           { this.props.groundInfoDisplayed ? 
            <div>
            <h3 className="groundTitle">{this.props.title}</h3>
            <p className="groundDescription">{this.props.explanation}</p>
@@ -30,6 +30,7 @@ class Ground extends Component {
             
             <p>{this.props.date}</p>
             <p>{this.props.copyright}</p>
+            <p>Source: National Geographic</p>
             
             </div>
            </div>

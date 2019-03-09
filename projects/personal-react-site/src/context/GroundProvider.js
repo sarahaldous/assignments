@@ -9,21 +9,19 @@ class GroundProvider extends Component {
     constructor(){
         super()
         this.state = {
-            // source: '',//id/name are within source
             // author: '',
             // title: '',
             // description: '',
             // url: '',
             // urlToImage: '',
             // publishedAt: '',
-            infoDisplayed: false,
+            groundInfoDisplayed: false,
             menuShowing: false,
             newsArray: [],
             selectedArticle: {}
         }
     }
     getGroundData = () => {
-        console.log(nationalGeographic)
         axios.get(`https://newsapi.org/v2/top-headlines?sources=national-geographic&apiKey=${nationalGeographic}`).then((response) => {
         console.log(response.data.articles)    
         this.setState({
@@ -34,7 +32,6 @@ class GroundProvider extends Component {
         }).catch(function(error){
             console.log(error)
         })
-        
     }
 
     randomArticle = () => {
@@ -55,24 +52,15 @@ class GroundProvider extends Component {
     
     // })
     
-    infoToggler = () => {
-        this.setState({infoDisplayed: !this.state.infoDisplayed})
+    groundInfoToggler = () => {
+        this.setState({groundInfoDisplayed: !this.state.groundInfoDisplayed})
     }
-    // hdToggler = () => {
-    //     this.setState(prevState => ({
-    //         hdToggle: !prevState.hdToggle
-    //     }))
-    // }
+  
     menuToggler = () => {
         this.setState(prevState => ({
             menuShowing: !prevState.menuShowing
         }))
     }
-    // enhancedToggler = () => {
-    //     this.setState(prevState => ({
-    //         enhancedToggle: !prevState.enhancedToggle
-    //     }))
-    // }
 
     render(){
        
@@ -81,7 +69,7 @@ class GroundProvider extends Component {
                 value={{
                     ...this.state,
                     getGroundData:this.getGroundData,
-                    infoToggler:this.infoToggler,
+                    groundInfoToggler:this.groundInfoToggler,
                     menuToggler:this.menuToggler
                 }}>
                 {this.props.children}
