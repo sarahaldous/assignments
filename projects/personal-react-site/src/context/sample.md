@@ -5,3 +5,19 @@
     "service_version":"v1",
     "title":"Sharpless 249 and the Jellyfish Nebula",
     "url":"https://apod.nasa.gov/apod/image/1903/F_JellyFish_FIN_APOD1024.jpg"}
+
+   
+    "articles": [
+        {
+            "source": {
+                "id": "national-geographic",
+                "name": "National Geographic"
+            },
+            "author": "Andrew Fazekas",
+            "title": "Equinox supermoon, and more can't-miss sky shows in March",
+            "description": "Look up this month to see planetary pairings, ghostly lights, and a special spring supermoon.",
+            "url": "https://www.nationalgeographic.com/science/2019/03/march-sky-watching-guide-supermoon-equinox-planets.html",
+            "urlToImage": "https://www.nationalgeographic.com/content/dam/science/2019/03/01/skyguide/01-skyguide-nationalgeographic_2696928.jpg",
+            "publishedAt": "2019-03-02T13:22:23.1410191Z",
+            "content": null
+        }

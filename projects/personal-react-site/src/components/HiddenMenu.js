@@ -1,21 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { withSpace } from '../context/Provider'
+import { withSpace } from '../context/GalaxyProvider'
 
 const HiddenMenu = props => {
-    const { navToggle, toggler, menuToggler } = props
-    console.log(props.menuToggler)
+    const { menuToggler, menuShowing } = props
     return (
-        // <div onClick={toggler} className={`nav nav-${navToggle ? "open" : "closed" }`}>
-        <div className="nav">
+        <div className={`nav nav-${menuShowing ? "open" : "closed" }`}>
+       
         <button id="menuBtn" onClick={menuToggler}>Menu</button>
-        <Link className="groundLink" to="/ground">Travel to Another Part of Earth</Link>
-        <Link className="earthLink"  to="/">See The Planet</Link>
-        <Link className="galaxyLink" to="/galaxy">Explore the Galaxy</Link>
+        <Link onClick={menuToggler} className="groundLink" to="/ground">Travel to Another Part of Earth</Link>
+        <Link onClick={menuToggler} className="earthLink"  to="/">See The Planet</Link>
+        <Link onClick={menuToggler} className="galaxyLink" to="/galaxy">Explore the Galaxy</Link>
         </div>
     )
 
         
 }
-
+ // <div className="nav"> 
 export default withSpace(HiddenMenu)

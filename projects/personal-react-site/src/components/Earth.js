@@ -1,4 +1,8 @@
-import React from 'react'
+import React, {Component} from 'react'
+import { withPlanet} from "../context/EarthProvider"
+// import moment from 'moment'
+
+// const formatted = moment(new Date()).format().split("T")[0]
 
 class Earth extends Component {
     constructor(){
@@ -8,43 +12,32 @@ class Earth extends Component {
                 
             }
     }
-    componentDidMount(){
-        this.props.getEarthData()
-    }
-    
-
+    // componentDidMount(){
+    //     this.props.getEarthData()
+    // }
     render(){
+        console.log(this.props)
+
         
-    
-    console.log(this.props)
     return (
-        <div className="earthContainer" >
-            { this.props.infoDisplayed ? 
-            <div>
-            <h3 className="earthTitle">{this.props.title}</h3>
-            <p className="earthDescription">{this.props.explanation}</p>
-            <div id="bottomOfImage">
-            
-            <p>{this.props.date}</p>
-            <p>{this.props.copyright}</p>
-            
-            </div>
-            </div>
-            :
-            null
-            }
+        <div className="earthContainer" style={{backgroundImage: `url(${this.props.image})`}} id="earth-div">
+        
         </div>
     )
 }
 }
-return (
-    <div>
-        
+export default withPlanet(Earth)
 
+// this.props.enhancedToggle ? `url(${this.props.hdurl})` : `url(${this.props.image})`}} 
+            // { this.props.infoDisplayed ? 
+            // <div>
+            // <h3 className="earthTitle">{this.props.caption}</h3>
+            
+            // <div id="bottomOfImage">
+            // <p>{this.props.date}</p>
+            // </div>
 
-    </div>
-)
-}
-
-
-export default Earth
+            // </div>
+            // :
+            // null
+            // }

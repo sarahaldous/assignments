@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { withSpace} from "../context/Provider"
+import { withSpace} from "../context/GalaxyProvider"
 
 class Galaxy extends Component {
     constructor(){
@@ -12,14 +12,9 @@ class Galaxy extends Component {
     componentDidMount(){
         this.props.getGalaxyData()
     }
-   
-
     render(){
-        
-    
-    console.log(this.props)
     return (
-        <div className="galaxyContainer" >
+        <div className="galaxyContainer" style={{backgroundImage: this.props.hdToggle ? `url(${this.props.hdurl})` : `url(${this.props.url})`}} id="galaxy-div">
            { this.props.infoDisplayed ? 
            <div>
            <h3 className="galaxyTitle">{this.props.title}</h3>

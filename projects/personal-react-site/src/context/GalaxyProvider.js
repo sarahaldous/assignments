@@ -9,7 +9,6 @@ class SpaceProvider extends Component {
     constructor(){
         super()
         this.state = {
-            // galaxyImgUrl: "",
             date:'',
             explanation:'',
             hdurl: '',
@@ -36,29 +35,13 @@ class SpaceProvider extends Component {
                 title,
                 url
             })
-            console.log(this.state)
             
         }).catch(function(error){
             console.log(error)
         })
         
     }
-    getEarthData = () => {
-        axios.get(`https://api.nasa.gov/EPIC/api/enhanced/all?api_key=${nasa}`).then((response ) => {
-            const {
-                caption,
-                image,
-                date
-            }
-            
-            console.log(response.data)
-        }).catch(function(error){
-            console.log(error)
-        })
-    }
     
-    // earthImgUrl: "",
-    // groundImgUrl: ""
     infoToggler = () => {
         this.setState({infoDisplayed: !this.state.infoDisplayed})
     }
@@ -74,7 +57,7 @@ class SpaceProvider extends Component {
     }
 
     render(){
-        console.log(this.state)
+        
         return (
             <SpaceContext.Provider
                 value={{
@@ -89,14 +72,10 @@ class SpaceProvider extends Component {
         )
     }
 }
-
-        
-       
-        
+   
 export const withSpace = C => props => (
     <SpaceContext.Consumer>
         {value => <C {...props} {...value} />}
     </SpaceContext.Consumer>
 )
-
 export default SpaceProvider

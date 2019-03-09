@@ -1,9 +1,10 @@
 import React from 'react'
-import { withSpace } from '../context/Provider'
-import { Link } from 'react-router-dom'
+import { withSpace } from '../context/GalaxyProvider'
+// import { Link } from 'react-router-dom'
 
 const Nav = props => {
-    const { navToggle, toggler } = props
+    // const { navToggle, toggler } = props
+    console.log(props.hdToggle)
     return (
         <div className="navContainer">
             <button id="menuBtn" onClick={props.menuToggler}>Menu</button>

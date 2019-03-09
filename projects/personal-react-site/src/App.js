@@ -4,16 +4,20 @@ import Ground from './components/Ground.js'
 import Earth from './components/Earth.js'
 import Galaxy from './components/Galaxy.js'
 import HiddenMenu from './components/HiddenMenu.js'
-import { Switch, Route, BrowserRouter, withRouter } from 'react-router-dom'
-import { PageFade } from './index.js'
-import { withSpace } from './context/Provider'
+import { Switch, Route, 
+    // BrowserRouter, withRouter 
+} from 'react-router-dom'
+// import { PageFade } from './index.js'
+import { withSpace } from './context/GalaxyProvider'
+// import { withPlanet } from './context/EarthProvider'
+// import { withGround } from './context/GroundProvider'
 import './components/styles.css'
 
 class App extends Component {
     constructor(){
         super()
         this.state = {
-            navToggle: false,
+            // navToggle: false,
             
         }
     }
@@ -26,14 +30,10 @@ class App extends Component {
 
     render(){
         // const { navToggle } = this.state
-        const { location } = this.props
+        // const { location } = this.props
         return (
-            this.props.menuShowing ?
+            <div>
                 <HiddenMenu />
-                :
-            
-
-            <div className="app-container" style={{backgroundImage: this.props.hdToggle ? `url(${this.props.hdurl})` : `url(${this.props.url})`}} id="galaxy-div">
                 <Nav />
                 
                 <Switch className="page-display">

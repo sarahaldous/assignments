@@ -1,7 +1,9 @@
 import React from 'react'
 import App from './App.js'
 import ReactDOM from 'react-dom'
-import Provider from './context/Provider'
+import GalaxyProvider from './context/GalaxyProvider'
+import GroundProvider from './context/GroundProvider'
+import EarthProvider from './context/EarthProvider'
 import {BrowserRouter} from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
@@ -25,8 +27,12 @@ export const PageFade = props => {
 
 ReactDOM.render(
      <BrowserRouter>
-          <Provider>
-               <App /> 
-          </Provider>
+          <GroundProvider>
+               <EarthProvider>
+                    <GalaxyProvider>
+                         <App /> 
+                    </GalaxyProvider>
+               </EarthProvider>
+          </GroundProvider>
     </BrowserRouter>,
  document.getElementById('root'))
