@@ -38,7 +38,7 @@ class GroundProvider extends Component {
         const selectedArticle = this.state.newsArray[Math.floor(Math.random() * this.state.newsArray.length)];
         this.setState ({selectedArticle})
     }
-
+   
     // newsArrayContent = newsArray.map(selectedArticle => {
     //     return {
     //         sourceName: selectedArticle.source.name,

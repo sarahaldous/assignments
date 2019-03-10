@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 // import axios from 'axios'
-const nasa = (process.env.REACT_APP_NASA_KEY)
+// const nasa = (process.env.REACT_APP_NASA_KEY)
 const axios = require('axios')
 
 const SpaceContext = React.createContext()
