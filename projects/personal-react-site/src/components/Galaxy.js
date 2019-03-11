@@ -18,11 +18,13 @@ class Galaxy extends Component {
            { this.props.infoDisplayed ? 
            <div>
            <h3 className="galaxyTitle">{this.props.title}</h3>
-           <p className="galaxyDescription">{this.props.explanation}</p>
-           <div id="bottomOfImage">
+           <div className="scrollContainer galaxyDescription">
+           {this.props.explanation}
+           </div>
+           <div id="bottomOfGalaxyImage">
             
-            <p>{this.props.date}</p>
-            <p>{this.props.copyright}</p>
+            {/* <p>{this.props.date}</p> */}
+            {/* <p>{this.props.copyright}</p> */}
             
             </div>
            </div>

@@ -10,7 +10,7 @@ const Nav = props => {
     return (
         <div className="navContainer">
             <button id="menuBtn" onClick={props.menuToggler}>Menu</button>
-            <button className="HDImgBtn" onClick={props.hdToggler}>View in {props.hdToggle ? "SD" : "HD"}</button>
+            <button id="HDButton" className="HDImgBtn" onClick={props.hdToggler}>View in {props.hdToggle ? "SD" : "HD"}</button>
             { props.location.pathname === '/galaxy' && <button onClick={props.infoToggler} className="HDImgBtn">More Info</button> }
             { props.location.pathname === '/ground' && <button onClick={props.groundInfoToggler} className="HDImgBtn">More Info</button> }
         </div>
