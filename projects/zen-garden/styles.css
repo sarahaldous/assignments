@@ -1,9 +1,10 @@
-@media (max-width: 400px){
-    * {
-        margin: 0;
-       display: grid;
-        
-    }
+body {
+    margin: 0;
+    display: grid;
+}
+
+@media (max-width: 600px){
+    
     #title {
         font-display: center;
         /* space-above: 1px; */
@@ -12,10 +13,9 @@
         border-top: 10px solid rgb(2, 63, 58);
         display: grid;
         grid-template-rows: 10px auto 70px;
-        font-size: 25px;
+        font-size: 20px;
         background-image: url("resources/gridlines-opaque.png"), url("resources/contours.png"), url("resources/huntington.jpg");
         background-repeat: repeat, repeat, no-repeat;
-        /* display: flex; */
         background-size: cover;
         justify-content: center;
         align-items: center;
@@ -27,16 +27,17 @@
         width: 100%;
     }
     #swirlImage img {
-        padding-top: 170px;
+        padding-top: 0px;
         padding-bottom: 05px;
         height: 50px;
         width: 50px;
+        grid-row: 1;
     }
     h2 {
         /* justify-content: center; */
         /* position: absolute; */
-        top: 20px;
-        grid-row: 1;
+        top: 100px;
+        /* grid-row: 1; */
         font-size: 1.13em;
         font-family: 'Julius Sans One', sans-serif;
     }
