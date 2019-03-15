@@ -71,7 +71,7 @@ class BountyItem extends Component {
     
     const { firstName, lastName, living, bountyAmount, type, _id, handleDelete, handleEdit } = this.props
     return (
-        <div style={type === "Sith" ? {backgroundColor: "#ba312b", height: 200} : {backgroundColor: "#68452c", height: 200 }}>
+        <div style={type === "Sith" ? {backgroundColor: "orangered", height: 200} : {backgroundColor: "teal", height: 200 }}>
         { !this.state.editToggle ? 
         <>
             <h1>{firstName} {lastName}</h1>
