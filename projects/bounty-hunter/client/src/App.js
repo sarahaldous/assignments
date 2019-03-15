@@ -56,54 +56,28 @@ class App extends Component {
     handleDelete = (_id) => {
         axios.delete(`/bounty/${_id}`).then(response => {
             alert(response.data)
-            this.setState(prevState => {
+            this.setState(prevState => ({
                 bounty: prevState.bounty.filter(bounty => bounty._id !== _id)
+            }))
+        })
+    }
+    handleEdit = (_id, updates) => {
+        axios.put(`/bounty/${_id}`, updates).then(response => {
+            const updatedBounty = response.data
+            this.setState(prevState => {
+                return {
+                    bounty: prevState.bounty.map(bounty => bounty._id === _id ? updatedBounty : bounty)
+                }
             })
         })
+        .catch(error => console.log(error))
     }
     render(){
         console.log(this.state)
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input 
-                    type="text" 
-                    name="firstName" 
-                    placeholder="First Name"
-                    value={this.state.firstName} 
-                    onchange={this.handleChange}/>
-                    <input 
-                    type="text" 
-                    name="lastName" 
-                    placeholder="Last Name"
-                    value={this.state.lastName} 
-                    onchange={this.handleChange}/>
-                    <input 
-                    type="text" 
-                    name="living" 
-                    placeholder="Alive"
-                    value={this.state.living} 
-                    onchange={this.handleChange}/>
-                    <input 
-                    type="text" 
-                    name="bountyAmount" 
-                    placeholder="Bounty Amount"
-                    value={this.state.bountyAmount} 
-                    onchange={this.handleChange}/>
-                    <input 
-                    type="text" 
-                    name="type" 
-                    placeholder="Sith or Jedi?"
-                    value={this.state.type} 
-                    onchange={this.handleChange}/>
-                    {/* <input 
-                    type="text" 
-                    name="_id" 
-                    value={this.state._id} 
-                    onchange={this.handleChange}/> */}
-                    <button>Add Target</button>
-                </form>
-                {this.state.bounty.map(bounty => <BountyItem handleDelete={this.handleDelete} key={bounty._id} {...bounty}/>)}
+               <AddBountyForm buttonText="Add Target" handleChange={this.handleChange} handleSubmit={this.handleSubmit} {...this.state}/>
+                {this.state.bounty.map(bounty => <BountyItem handleDelete={this.handleDelete} handleEdit={this.handleEdit} key={bounty._id} {...bounty}/>)}
             </div>
         )
     }
