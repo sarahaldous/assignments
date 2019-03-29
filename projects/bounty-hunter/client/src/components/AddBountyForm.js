@@ -17,10 +17,10 @@ const AddBountyForm = (props) => {
                     value={props.lastName} 
                     onChange={props.handleChange}/>
                     <input 
-                    type="text" 
+                    type="checkbox" 
                     name="living" 
                     placeholder="Alive: true or false?"
-                    value={props.living} 
+                    checked={props.living} 
                     onChange={props.handleChange}/>
                     <input 
                     type="text" 

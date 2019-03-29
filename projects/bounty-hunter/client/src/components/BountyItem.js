@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import AddBountyForm from './AddBountyForm.js'
 
 class BountyItem extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             editToggle: false,
-            firstName: "",
-            lastName: "",
-            living: "",
-            bountyAmount: "",
-            type: "",
+            firstName: props.firstName,
+            lastName: props.lastName,
+            living: props.living,
+            bountyAmount: props.bountyAmount,
+            type: props.type,
         }
     }
 
@@ -75,7 +75,7 @@ class BountyItem extends Component {
         { !this.state.editToggle ? 
         <>
             <h1>{firstName} {lastName}</h1>
-            <p>Still Alive? {living && living.toString()}</p>
+            <p>Still Alive? {living.toString() && living.toString()}</p>
             <button onClick={() => handleDelete(_id)}>Delete</button>
             <button onClick={this.toggler}>Edit Target</button>
             </>

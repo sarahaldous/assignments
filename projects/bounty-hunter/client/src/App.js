@@ -15,7 +15,6 @@ class App extends Component {
             living: '',
             bountyAmount: '',
             type: '',
-            _id: '',
             bounty: []
         }
     }
@@ -27,8 +26,9 @@ class App extends Component {
         })
     }
     handleChange = e => {
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: value
         })
     }
     handleSubmit = e => {
@@ -39,7 +39,6 @@ class App extends Component {
             living: this.state.living,
             bountyAmount: this.state.bountyAmount,
             type: this.state.type,
-            _id: this.state._id
         }
         axios.post("/bounty", newBounty).then(response => {
             this.setState(prevState => ({
@@ -48,8 +47,7 @@ class App extends Component {
                 lastName: "",
                 living: '',
                 bountyAmount: '',
-                type: '',
-                _id: ''
+                type: ''
             }))
         })
     }

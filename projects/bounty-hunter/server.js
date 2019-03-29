@@ -10,7 +10,7 @@ app.use(morgan('dev'))
 
 app.use('/bounty', require('./routes/bounty'))
 
-mongoose.connect("mongodb://localhost:27017/first-db", {userNewUrlParser: true}, () => {
+mongoose.connect("mongodb://localhost:27017/bounty-db", {useNewUrlParser: true}, () => {
     console.log("Connected to the DB")
 })
 
@@ -18,4 +18,3 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
 })
 
-//QUESTION: ASK ABOUT "main": "index.js"  - generated automatically? change package.json?
