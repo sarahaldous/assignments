@@ -9,6 +9,7 @@ body {
   }
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400i');
 h2 {
+    margin: 0;
     font-family: 'Julius Sans One', sans-serif;
 }
 h3 {
@@ -23,10 +24,17 @@ p {
     margin-left: 35px;
     margin-bottom: 0;
 }
-span {
+/* span {
+    border-bottom: 2px dotted;
+} */
+u {
+    text-decoration: none;
     border-bottom: 2px dotted;
 }
-@media (max-width: 600px){
+span {
+    color: #0d8ba1;
+}
+@media (max-width: 320px){
    
     @font-face {
         font-family: symbolFont;
@@ -38,10 +46,10 @@ span {
     #header {
         font-size: 1em;
         height: 250px;
-        background-image: url("resources/gridlines-opaque.png"), url("resources/contours.png"), url("resources/huntington.jpg");
+        background-image: url("resources/contours.png"), url("resources/gridlines-opaque.png"),  url("resources/huntington.jpg");
         background-repeat: repeat, repeat, no-repeat;
         background-size: 100px 100px, 100px 100px, cover;
-        background-position: 10%, 60%;
+        background-position: 10%, 60%, cover;
         color: white;
         margin: 0;
         padding: 0;
@@ -55,7 +63,7 @@ span {
         align-items: center;
     }
     .header-text h2 {
-       padding: 30px;
+       /* padding: 30px; */
     }
     /* .header-text p {
         margin: 0
@@ -86,7 +94,7 @@ span {
         justify-content: space-between;
         align-items: center;
         position: relative;
-        top: 32px;
+        top: 52px;
         background-color: rgba(255, 255, 255, 0.384);
     }
     #header-footer p {
@@ -131,10 +139,10 @@ span {
     }
     #participation {
         color: rgb(61, 61, 61);
-        background-image: url("resources/contours.png"), url("resources/bamboo.png");
+        background-image: url("resources/gridlines.png"), url("resources/contours.png"), url("resources/bamboo.png");
         background-repeat: repeat, no-repeat;
         background-size: 100px 100px, cover;
-        background-color: rgba(2, 117, 50, 0.219);
+        background-color: rgba(138,188,159,0.5);
         padding-top: 20px;
         background-attachment: fixed;
     }
@@ -149,14 +157,19 @@ span {
     #requirements {
         font-size: 0.9em;
         color: rgb(32, 32, 32);
+        padding-top: 20px;
     }
     #requirements p {
         font-size: .9em;
     }
+    .benefitsP {
+        padding-bottom: 30px;
+    }
     #credits {
-        background-image: url("resources/koi.jpg");
-        color: rgba(255, 255, 255, 0.685);
-        height: 200px;
+        background-image: url("resources/contours.png"), url("resources/gridlines.png"), url("resources/koi.jpg");
+        background-size: 100px 100px cover;
+        color: rgba(255, 255, 255, 0.5);
+        height: 120px;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -164,9 +177,11 @@ span {
     }
     #credits h4 {
         font-style: italic;
-        line-height: 1.5;
+        font-size: 1.1em;
+        font-weight: lighter;
+        line-height: 1.75;
         text-align: center;
-        padding: 30px;
+        padding: 20px;
     }
     #credits span {
         font-style: normal;
@@ -201,24 +216,36 @@ span {
     #variations {
         background-color: rgba(0, 128, 43, 0.103);
         text-indent: 20px;
+        color: #607476;
     }
     #variations h3 {
         font-size: 1em;
-        border-top: 1px solid gray;
+        border-top: 1px solid rgba(128, 128, 128, 0.212);
         margin: 0;
-        padding: 15px;
+        padding-top: 15px;
+        padding-left: 0;
     }
     #variations p {
         /* /* text-indent: 0; */
         margin: 0;
-        color: rgb(1, 71, 60);
+        /* color: rgb(1, 71, 60); */
+        color: #616857;
         font-size: .8em;
         display: inline;
+        padding: 15px;
     }
     #variations p1 {
         font-style: italic;
         display: inline;
         text-indent: 55px;
+        padding-left: 20px;
+        color: #6168578c;
+    }
+    #variations span {
+        margin-left: 15px;
+    }
+    .variation {
+        padding-bottom: 15px;
     }
     #footer {
         background-image: url("resources/bamboo.png");
@@ -226,7 +253,6 @@ span {
         color: rgb(1, 71, 60);
         font-family: 'Julius Sans One', sans-serif;
     }
-    
     #footer p {
         font-family: 'Julius Sans One', sans-serif;
         border-top: 1px solid rgb(161, 161, 161);
@@ -234,7 +260,6 @@ span {
         line-height: 3; 
         text-indent: 20px;
     }
-   
     /* h2 {
         top: 90px;
         font-size: 1.13em;
@@ -281,8 +306,12 @@ span {
 
 
 
-/* @media only screen and (min-width: 401px){
-    .vanish{
+@media only screen and (min-width: 321px){ 
+    #variations {
+        display: inline;
+    }
+}
+    /* .vanish{
         display: none;
     }
     body {
@@ -316,5 +345,4 @@ span {
     }
     #left {
         grid-column: 1 / 3;
-    }
-} */
+    } */
