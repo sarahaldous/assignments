@@ -35,7 +35,9 @@ span {
     color: #0d8ba1;
 }
 @media (min-width: 320px){
-   
+   body > div > #header, #intro, #participation, #requirements, #credits, #variations, #footer {
+       grid-column: 1/3;
+   }
     @font-face {
         font-family: symbolFont;
         src: url(verdemoderna.woff);
@@ -47,10 +49,10 @@ span {
         position: relative;
         font-size: 1em;
         height: 250px;
-        background-image: url("resources/contours.png"), url("resources/gridlines-opaque.png"),  url("resources/huntington.jpg");
+        background: url("resources/contours.png"), url("resources/gridlines-opaque.png"), url("resources/huntington.jpg");
         background-repeat: repeat, repeat, no-repeat;
-        background-size: 100px 100px, 100px 100px, cover;
-        background-position: 10%, 60%, cover;
+        background-size: 25%, 100px, cover;
+        /* background-position: 60%, 10%, center; */
         color: white;
         margin: 0;
         padding: 0;
@@ -105,6 +107,9 @@ span {
         color: rgba(245, 245, 245, 0.87);
         font-style: normal;
         margin: 0;
+    }
+    #header-footer:hover {
+        background-color: rgba(255, 255, 255, 0.568);
     }
     .carrot {
         font-size: 2.5em;
@@ -250,16 +255,26 @@ span {
     }
     #footer {
         background-image: url("resources/bamboo.png");
-        background-color: rgba(0, 128, 43, 0.24);
+        /* background-color: rgba(0, 128, 43, 0.24); */
+        background-color: rgba(118, 177, 142, 0.5);
         color: rgb(1, 71, 60);
         font-family: 'Julius Sans One', sans-serif;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-top: 1px solid rgb(161, 161, 161);
     }
     #footer p {
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
         font-family: 'Julius Sans One', sans-serif;
-        border-top: 1px solid rgb(161, 161, 161);
+       
+        border-bottom: 1px solid rgb(161, 161, 161);
         margin: 0;
         line-height: 3; 
         text-indent: 20px;
+        padding: 10px;
+       /* display: grid; */
+       /* grid-template-columns: 2 1fr; */
     }
 
     
@@ -267,19 +282,16 @@ span {
    #exampleFiles {
        display: none;
    }
-
-   
-
-
 }
-    
-   
-  
-    
-
-
 
  @media only screen and (min-width: 500px){ 
+    body > div > #header, #intro, #participation, #requirements, #credits, #variations, #footer {
+        grid-column: 1/3;
+    }
+    @font-face {
+        font-family: symbolFont;
+        src: url(verdemoderna.woff);
+      }
     /* #swirlImage {
         display: none;
     }
@@ -287,6 +299,25 @@ span {
         content:  url("./resources/enso.svg");
        
     } */
+    #exampleFiles {
+        display: inherit;
+        
+    }
+    #exampleFiles .green {
+        color: #809b7e;
+        font-family: 'Julius Sans One', sans-serif;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+    #exampleFiles .arrow {
+        font-family: symbolFont;
+        color: #809b7e;
+    }
+
+    #exampleFiles a:hover {
+        background-color: #0d8ba1;
+        color: white;
+    }
     #variations {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -316,5 +347,114 @@ span {
    body{
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(6, auto);
+        
    } 
+   #header{
+      width: 100vw;
+      height: 310px;
+        grid-column: 1/3;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+   }
+   #header > #weird-line-header {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+   }
+   #header > .header-text {
+       grid-column: 1/2;
+       grid-row: 1;
+       font-size: 1.25em;
+   }
+   /* #header > #swirlImage {
+       height: 1600px;
+       width: 1600px;
+   } */
+   #header h6 {
+       font-size: 1.25em;
+   }
+   #header #header-footer{
+       /* position: inline; */
+        justify-self: center;
+        align-self: center;
+        display: flex;
+       /* flex-direction: column; */
+       grid-column: 2/3;
+       grid-row: 1;
+       margin-bottom: 100px;
+       margin-right: 5px;
+       margin-left: 5px;
+       font-size: 1.25em;
+       color: rgba(255, 255, 255, 0.486);
+       background-color: rgba(255, 255, 255, 0.164);
+     /* justify-content: center; */
+   }
+   /* #header-footer:hover {
+    background-color: rgba(255, 255, 255, 0.568);
+    z-index: 10;
+    } */
+   #intro {
+    flex-direction: column;
+    display: flex;
+       grid-column: 1;
+       grid-row: 2;
+   }
+   #variations {
+        flex-direction: column;
+        display: flex;
+       grid-column: 2;
+       grid-row: 2;
+       padding: 70px;
+       font-size: 1.125em;
+   }
+   #participation {
+    flex-direction: column;
+    display: flex;
+   grid-column: 1;
+   grid-row: 3;
+   }
+   #footer {
+       padding: 100px;
+    flex-direction: column;
+    display: flex;
+   grid-column: 2;
+   grid-row: 3;
+   }
+   #requirements {
+    flex-direction: column;
+    display: flex;
+   grid-column: 1;
+   grid-row: 4;
+   }
+   #div10 {
+    background-color: rgba(15, 128, 53, 0.116);
+       flex-direction: column;
+    display: flex;
+   grid-column: 2;
+   grid-row: 4;
+   }
+   #credits {
+    flex-direction: column;
+    display: flex;
+   grid-column: 1 / 3;
+   grid-row: 5;
+   font-size: 2em ;
+   padding: 100px;
+   }
+   #weird-symbols {
+   
+    grid-column: 1 / 3;
+   grid-row: 6;
+   font-size: 2.5em;
+   font-weight: 400;
+   padding: 100px;
+   border-left: 2px solid rgba(245, 245, 245, 0.589);
+   width: 100%;
+   }
+   #weird-symbols > div {
+       margin: 0 180pt;
+   }
+
 }
