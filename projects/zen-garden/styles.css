@@ -34,7 +34,7 @@ u {
 span {
     color: #0d8ba1;
 }
-@media (max-width: 320px){
+@media (min-width: 320px){
    
     @font-face {
         font-family: symbolFont;
@@ -44,6 +44,7 @@ span {
         font-display: center;
     }
     #header {
+        position: relative;
         font-size: 1em;
         height: 250px;
         background-image: url("resources/contours.png"), url("resources/gridlines-opaque.png"),  url("resources/huntington.jpg");
@@ -63,11 +64,11 @@ span {
         align-items: center;
     }
     .header-text h2 {
-       /* padding: 30px; */
-    }
-    /* .header-text p {
+        padding: 20px; 
+     }  
+     .header-text p {
         margin: 0
-    } */
+    }
     #header h6 {
         font-style: italic;
         font-size: 1em;
@@ -93,8 +94,8 @@ span {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-        top: 52px;
+        position: absolute;
+        bottom: 0;
         background-color: rgba(255, 255, 255, 0.384);
     }
     #header-footer p {
@@ -193,7 +194,7 @@ span {
    
     #weird-symbols {
         height: 80px;
-        /* background-color: rgb(17, 66, 66); */
+        background-color: rgb(17, 66, 66); 
         background-color: rgb(19, 67, 71);
         justify-content: center;
         align-content: center;
@@ -260,35 +261,7 @@ span {
         line-height: 3; 
         text-indent: 20px;
     }
-    /* h2 {
-        top: 90px;
-        font-size: 1.13em;
-        font-family: 'Julius Sans One', sans-serif;
-    }
-    h6 {
-        color: rgba(255, 255, 255, 0.534);
-        grid-row: 2;
-        width: 100%;
-        height: 60px;
-        display: flex;
-        position: absolute;
-        top: 130px;
-        justify-content: center;
-        font-style: italic;
-    }
-    
-    #header-footer {
-        height: 100px;
-        /* color: rgba(245, 245, 245, 0.541);
-        /* font-size: 1.1em; */
-        /* grid-row: 3;
-        width: 100vw;
-        height: 100px;
-        position: fixed; */
-        /* display: flex; */
-        /* align-items: center;
-        /* justify-content: space-between; */
-        /* background-color: rgba(255, 255, 255, 0.247); */
+
     
   
    #exampleFiles {
@@ -306,43 +279,42 @@ span {
 
 
 
-@media only screen and (min-width: 321px){ 
-    #variations {
-        display: inline;
-    }
-}
-    /* .vanish{
+ @media only screen and (min-width: 500px){ 
+    /* #swirlImage {
         display: none;
     }
-    body {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, auto);
-    }
-    #div1 {
-        grid-column: 1 / 3;
-        grid-column: 1 / span 2;
-
-@media only screen and (min-width: 700px){
-    #container {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-
-    }
-
-    main {
-        grid-column: 1 / 2;
-    }
-
-    footer {
-        grid-column: 3 / 4;
-        grid-row: 1 / span 3;
-        height: 100%;
-        grid-row: 2 / 5;
-    }
-    #right {
-        grid-column: 1 / 3
-    }
-    #left {
-        grid-column: 1 / 3;
+    #header h2::before {
+        content:  url("./resources/enso.svg");
+       
     } */
+    #variations {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+   .header-text{
+       flex-direction: row;
+       font-size: 1em;
+   }
+  #header img {
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    opacity: .6;
+  }
+   .header-text h2 {
+       font-size: 2.5em;
+       font-weight: lighter;
+       margin-top: 35px;
+   }
+   .header-text h6 {
+        text-align: center;
+   }
+
+    
+} 
+@media only screen and (min-width: 1100px){
+   body{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+   } 
+}
