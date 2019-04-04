@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script type = "text/javascript">
+        function info() {
+            alert ("alert")
+            document.write 
+        }  
+    </script>
+</head>
+<body>
+    <h1>Welcome to The Packing Planner!</h1>
+   
+    <form name="travelForm">
+    <h3>Destination</h3>
+        <input type="text" placeholder="Destination" name="destination">
+   
+    <h3>Length of Stay</h3>
+        <input type="number" name="nights" placeholder="Number of Days">
+    <h3>Gender</h3>
+        Female <input type="radio" value="Female" name="gender">
+        Male <input type="radio" value="Male" name="gender">
+    <h3>Activities</h3>
+        <div>Swimming <input type="checkbox" value="Swimming" name="swimming"></div>
+        <div></div>Fancy Event <input type="checkbox" value="FancyEvent" name="fancyEvent"></div>
+        <div></div>Workout <input type="checkbox" value="Workout" name="workout"></div>
+        <h3>Temperature Range</h3>
+        <div id="location">        What is the Projected Temperature during your vacation?
+            <select id="selector">
+                <option value = "belowFreezing" >Less than 30 Degrees</option>
+                <option value = "cold" >30-50 Degrees</option>
+                <option value = "warm" >50-75 Degrees</option>
+                <option value = "hot" >75 Degrees or More</option>
+            </select>
+        </div>
+        
+       
+    <button>Submit</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>

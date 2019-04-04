@@ -1,11 +1,42 @@
-import React, {Component} from 'react'
-// import logo from ',/logo.svg'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import * as serviceWorker from './serviceWorker'
+import React from 'react'
+// import ReactDOM from 'react-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
+import {withUser} from './context/UserProvider.js'
+import AuthContainer from './components/auth/AuthContainer.js'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+
+//NECESSARY COMPONENTS:
+
+//Auth
+    //Form for login and signup
+//UserProvider (context)
+
+//Dependencies:
+//axios, react-router-dom, prop-types (which we installed upon create-react-app)
+
+const App = (props) => {
+    const {user, token, signup, login} = props
+    return (
+        <div>
+            <Switch>
+                <Route 
+                path="/login" 
+                render={rProps => 
+                    <AuthContainer 
+                        {...rProps} 
+                        signup={signup} 
+                        login={login} />}/>
+            </Switch>
+
+        </div>
+    )
+}
+// import logo from ',/logo.svg'
+// import './index.css'
+// import App from './App'
+// import * as serviceWorker from './serviceWorker'
+
+// ReactDOM.render(<App />, document.getElementById('root'))
 
 // import './App.css'
 
@@ -31,4 +62,4 @@ ReactDOM.render(<App />, document.getElementById('root'))
 //         );
 //     }
 // }
-// export default App
+export default withUser(App)

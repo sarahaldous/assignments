@@ -44,7 +44,7 @@ authRouter.post("/login", (req, res, next) => {
             res.status(403)
             return next(new Error("username or password incorrect"))
         }
-     //If user DOES exoist, User.checkpassword(req.body.password) - returns (err, is Match[boolean])
+     //If user DOES exist, User.checkpassword(req.body.password) - returns (err, is Match[boolean])
         user.checkPassword(req.body.password, (err, isMatch) => {
             if(err){
                 res.status(500)
