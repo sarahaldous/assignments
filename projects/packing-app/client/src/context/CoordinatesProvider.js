@@ -3,6 +3,9 @@ const coordinates = (process.env.REACT_APP_OC_API_KEY)
 const weather = (process.env.REACT_APP_DS_API_KEY)
 const axios = require('axios')
 
+//Add ability to save searched destinations with suitcase icon!!!!!!!
+//build saveCity method
+//axios.post to route on back end
 const CoordinatesContext = React.createContext()
 
 class CoordinatesProvider extends Component {
@@ -20,7 +23,14 @@ class CoordinatesProvider extends Component {
             forecast: []
         }
     }
+
     getCoordinatesData = () => {
+        const city = this.state.city
+        let correctCity = ''
+        // use regex to find whitespace
+        // remove witespacde
+        // replace with %20
+
         axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.city}%2C%20${this.state.state}&key=${coordinates}&language=en&pretty=1`).then((response) => {
             this.setState({ latitude: response.data.results[0].geometry.lat, longitude:  response.data.results[0].geometry.lng}, () => this.getWeather())
         }).catch(function(error){

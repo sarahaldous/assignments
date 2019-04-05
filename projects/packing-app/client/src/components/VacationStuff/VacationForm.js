@@ -3,8 +3,10 @@
 import React from 'react'
 import {withCoordinates} from '../../context/CoordinatesProvider.js'
 
+
 const VacationForm = (props) => {
     return (
+    
         <form className="vacationForm" onSubmit={props.handleSubmit}>
             <input  type="text"
                     name="city"

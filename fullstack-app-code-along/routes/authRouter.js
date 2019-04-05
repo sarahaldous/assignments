@@ -34,7 +34,7 @@ authRouter.post("/signup", (req, res, next) => {
 //log-in - POST
 authRouter.post("/login", (req, res, next) => {
     //Find a user by that username -> error or user object will be returned. It may be null.
-    User.findOne({username: req.body.iusername.toLowerCase()}, (err, user) => {
+    User.findOne({username: req.body.username.toLowerCase()}, (err, user) => {
         if(err){
             res.status(500)
             return next(err)
@@ -56,7 +56,7 @@ authRouter.post("/login", (req, res, next) => {
                 return next(new Error("Username or password incorrect"))
             }
             //Create token
-            const token = jwt.sign(savedUser.withoutPassword(), process.env.SECRET)
+            const token = jwt.sign(user.withoutPassword(), process.env.SECRET)
             //Send response
             return res.status(200).send({user: user.withoutPassword(), token})
         })

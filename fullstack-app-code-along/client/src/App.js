@@ -3,7 +3,35 @@ import React from 'react'
 import {Switch, Route, Redirect} from 'react-router-dom'
 import {withUser} from './context/UserProvider.js'
 import AuthContainer from './components/auth/AuthContainer.js'
+import ProtectedRoute from './shared/ProtectedRoute.js'
+import Home from './components/Home.js'
 
+
+const App = (props) => {
+    const {user, token} = props
+    return (
+        <div>
+            <Switch>
+                <Route 
+                    path="/login" 
+                    render={routerProps => token ? <Redirect to="/home"/> : <AuthContainer {...routerProps} />}/>
+                <ProtectedRoute 
+                    token={token}
+                    path="home"
+                    redirectTo="/login"
+                    component={Home}   
+                    username={user.username}   
+                    />          
+                    {/* <Route 
+                    path="/home" 
+                    render={routerProps => !token ? <Redirect to="/login"/> : <Home {...routerProps}/>}/> */}
+            </Switch>
+
+        </div>
+    )
+}
+
+export default withUser(App)
 
 //NECESSARY COMPONENTS:
 
@@ -14,23 +42,6 @@ import AuthContainer from './components/auth/AuthContainer.js'
 //Dependencies:
 //axios, react-router-dom, prop-types (which we installed upon create-react-app)
 
-const App = (props) => {
-    const {user, token, signup, login} = props
-    return (
-        <div>
-            <Switch>
-                <Route 
-                path="/login" 
-                render={rProps => 
-                    <AuthContainer 
-                        {...rProps} 
-                        signup={signup} 
-                        login={login} />}/>
-            </Switch>
-
-        </div>
-    )
-}
 // import logo from ',/logo.svg'
 // import './index.css'
 // import App from './App'
@@ -62,4 +73,3 @@ const App = (props) => {
 //         );
 //     }
 // }
-export default withUser(App)
