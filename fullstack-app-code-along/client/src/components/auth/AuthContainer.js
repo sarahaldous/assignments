@@ -4,8 +4,8 @@ import AuthForm from './AuthForm.js'
 import {withUser} from '../../context/UserProvider.js'
 
 class AuthContainer extends Component  {
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state = {
             username: "",
             password: "",
@@ -56,6 +56,7 @@ class AuthContainer extends Component  {
                         password={this.state.password}
                         btnText="Sign Up"
                     />
+                    <h6 style={{color: '#990033'}}>{this.props.errMsg}</h6>
                     <h6 onClick={this.toggler}>Already a Member?</h6>
                     </>
                     :
@@ -68,6 +69,7 @@ class AuthContainer extends Component  {
                         password={this.state.password}
                         btnText="Log In"
                     />
+                    <h6 style={{color: '#cc0066'}}>{this.props.errMsg}</h6>
                     <h6 onClick={this.toggler}>Not a Member?</h6>
                 </>
                 }

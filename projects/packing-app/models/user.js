@@ -17,10 +17,15 @@ const userSchema = new Schema({
         type: Boolean,
         default: false
     },
-    gender: {
-        type: String,
-        required: true
-    }
+    favLocations: [{
+        type: Schema.Types.ObjectId,
+        ref: "FavLocation",
+        default: []
+    }]
+    // gender: {
+    //     type: String,
+    //     required: true
+    // }
 })
 
 userSchema.pre("save", function(next){

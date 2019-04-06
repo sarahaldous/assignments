@@ -10,6 +10,7 @@ const VacationForm = (props) => {
         <form className="vacationForm" onSubmit={props.handleSubmit}>
             <input  type="text"
                     name="city"
+                    placeholder="City"
                     value={props.city}
                     onChange={props.handleChange}/>
                     <input  type="text"
@@ -17,10 +18,10 @@ const VacationForm = (props) => {
                     placeholder="State or Country"
                     value={props.state}
                     onChange={props.handleChange}/>
-            <input  type="calendar"
+            {/* <input  type="calendar"
                         name="dates"
                         value={props.dates}
-                        />
+                        /> */}
                 <button>Submit</button>
 
        </form>

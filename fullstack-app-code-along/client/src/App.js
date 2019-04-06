@@ -5,13 +5,19 @@ import {withUser} from './context/UserProvider.js'
 import AuthContainer from './components/auth/AuthContainer.js'
 import ProtectedRoute from './shared/ProtectedRoute.js'
 import Home from './components/Home.js'
+import NotFound from './components/NotFound.js'
 
 
 const App = (props) => {
-    const {user, token} = props
+    const {user, token, logout} = props
+    document.title = props.location.pathname === "/" ? "" :
+    props.location.pathname.slice(1)[0].toUpperCase() + props.location.pathname.slice(2)
+
     return (
         <div>
             <Switch>
+                <Route exact path="/" render=
+                {() => token ? <Redirect to="/home"/> : <Redirect to="/login"/>}/>
                 <Route 
                     path="/login" 
                     render={routerProps => token ? <Redirect to="/home"/> : <AuthContainer {...routerProps} />}/>
@@ -20,8 +26,10 @@ const App = (props) => {
                     path="home"
                     redirectTo="/login"
                     component={Home}   
-                    username={user.username}   
-                    />          
+                    username={user.username} 
+                    logout={logout}  
+                    />    
+                    <Route path="*" component={NotFound}/>      
                     {/* <Route 
                     path="/home" 
                     render={routerProps => !token ? <Redirect to="/login"/> : <Home {...routerProps}/>}/> */}

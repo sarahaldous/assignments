@@ -26,6 +26,7 @@ class WeatherDisplay extends Component {
                 return (
                     
                     <div>
+                        <h2>{this.props.dailySummary}</h2>
                         {/* Put weekly weather summary here */}
                        
                           <p>(Date)</p>

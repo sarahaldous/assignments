@@ -1,37 +1,66 @@
 import React from 'react'
-import {Switch, Route, Redirect} from 'react-router-dom'
+import {Switch, Route, Redirect, withRouter} from 'react-router-dom'
 import {withUser} from './context/UserProvider.js'
-// import AuthContainer from './components/auth/AuthContainer.js'
 import AuthContainer from './components/auth/AuthContainer.js'
 import ProtectedRoute from './shared/ProtectedRoutes.js'
 import Home from './components/Home.js'
+import NotFound from './components/NotFound.js'
 import WeatherDisplay from './components/VacationStuff/WeatherDisplay.js'
+import VacationForm from './components/VacationStuff/VacationForm'
 
 const App = (props) => {
-    const {user, token} = props
+    const {user, token, logout} = props
+    document.title = props.location.pathname === "/"  ? "" :
+    props.location.pathname.slice(1)[0].toUpperCase() + 
+    props.location.pathname.slice(2) 
     return (
         <div>
             <Switch>
                 <Route
+                    exact path="/"
+                    render={() => token 
+                    ? 
+                    <Redirect to="/home"/> 
+                    :
+                    <Redirect to="/login"/>} />
+               <Route   
                     path="/login"
-                    render={routerProps => token ? <Redirect to="/home"/> :
-                <AuthContainer {...routerProps} />}/>
+                    render={rProps => token 
+                    ? 
+                    <Redirect to="/home" /> 
+                    : 
+                    <AuthContainer  {...rProps}/>} />
                 <ProtectedRoute 
                     token={token}
-                    path="home"
+                    path="/home"
                     redirectTo="/login"
                     component={Home}   
-                    username={user.username}   
-                    />  
-                <Route
-                    path="/weather" component={WeatherDisplay}
-                    />
+                    username={user.username}  
+                    logout={logout} 
                     
+                    />  
+                <ProtectedRoute
+                    token={token}
+                    path="/vacation"
+                    redirectTo="/login"
+                    component={VacationForm}
+                    username={user.username}
+                    logout={logout}
+                    />
+                <ProtectedRoute
+                    token={token}
+                    path="/weather"
+                    redirectTo="/login"
+                    component={WeatherDisplay}
+                    username={user.username}
+                    logout={logout}
+                    />
+                <Route path="*" component={NotFound}/>     
             </Switch>
         </div>
     )
 }
-export default withUser(App)
+export default withRouter(withUser(App))
 
 
 

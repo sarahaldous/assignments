@@ -8,7 +8,7 @@ const ProtectedRoute = props => {
         ? 
          <Route path={path} render={rProps => <Component {...rProps} {...rest}/>}/>
         :
-            <Redirect to={redirectTo}/>
+        <Redirect to={redirectTo}/>
     )
 }
 

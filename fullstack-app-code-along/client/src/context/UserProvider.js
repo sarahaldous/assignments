@@ -16,7 +16,8 @@ class UserProvider extends Component {
         super()
         this.state = {
             user: JSON.parse(localStorage.getItem("user")) || {},
-            token: localStorage.token || ""
+            token: localStorage.token || "",
+            errMsg: ""
         }
     }
     signup = credentials => {
@@ -24,9 +25,9 @@ class UserProvider extends Component {
             const {user, token} = res.data
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("token", token)
-            this.setState({user, token}, this.props.history.push("/home"))
+            this.setState({user, token, errMsg: ""})
         })
-        .catch(err => console.log(err))
+        .catch(err => this.handleErr(err.response.data.errMsg))
     }
     //this.props.signup().then()  IF  you add return above before axios.post
     
@@ -36,23 +37,30 @@ class UserProvider extends Component {
             const {user, token} = res.data
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("token", token)
-            this.setState({user, token}, this.props.history.push("/home"))
+            this.setState({user, token, errMsg: ""})
         })
-        .catch(err => console.log(err))
+        .catch(err => this.handleErr(err.response.data.errMsg))
     }
 
-    getProtectedStuff = () => {
-        userAxios.get("/api/user/specialsomething").then(res => {
-
-        })
+    logout = () => {
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        this.setState({user: {}, token: ""})
     }
+    handleErr = errMsg => this.setState({errMsg})
+    // getProtectedStuff = () => {
+    //     userAxios.get("/api/user/specialsomething").then(res => {
+
+    //     })
+    // }
     render(){
         return (
             <UserContext.Provider
             value={{
                 ...this.state,
                 signup: this.signup,
-                login: this.login
+                login: this.login,
+                logout: this.logout
             }}>
                 {this.props.children}
             </UserContext.Provider>

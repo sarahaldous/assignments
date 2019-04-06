@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 const coordinates = (process.env.REACT_APP_OC_API_KEY)
 const weather = (process.env.REACT_APP_DS_API_KEY)
 const axios = require('axios')
+
 
 //Add ability to save searched destinations with suitcase icon!!!!!!!
 //build saveCity method
@@ -24,7 +26,7 @@ class CoordinatesProvider extends Component {
         }
     }
 
-    getCoordinatesData = () => {
+    getCoordinatesData = props => {
         const city = this.state.city
         let correctCity = ''
         // use regex to find whitespace
@@ -37,10 +39,11 @@ class CoordinatesProvider extends Component {
             console.log(error)
         })
     }
-    getWeather = () => {
+    getWeather = (props) => {
         axios.get(`https://vschool-cors.herokuapp.com?url=https://api.darksky.net/forecast/${weather}/${this.state.latitude},${this.state.longitude}`).then((response) => {
             // console.log(response.data)
             this.setState({ forecast: response.data.daily.data}, () => console.log(this.state.forecast))
+            this.setState({ dailySummary: response.data.daily.summary}, () => console.log(this.state.dailySummary))
         }).catch(function(error){
             console.log(error)
         })
@@ -59,7 +62,7 @@ class CoordinatesProvider extends Component {
                 tempRange: "",
                 activities: ""
             }
-        }) 
+        },() => this.props.history.push('/weather')) 
         this.getCoordinatesData()
     }
     render(){
@@ -81,4 +84,4 @@ export const withCoordinates = C => props => (
         {value => <C {...props} {...value} />}
     </CoordinatesContext.Consumer>
 )
-export default CoordinatesProvider
+export default withRouter(CoordinatesProvider)
