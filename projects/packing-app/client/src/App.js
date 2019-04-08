@@ -7,6 +7,7 @@ import Home from './components/Home.js'
 import NotFound from './components/NotFound.js'
 import WeatherDisplay from './components/VacationStuff/WeatherDisplay.js'
 import VacationForm from './components/VacationStuff/VacationForm'
+import LocationProvider from './context/LocationProvider.js'
 
 const App = (props) => {
     const {user, token, logout} = props

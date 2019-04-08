@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/packingDB", {useNewUrlParser: true},
 //Routes
 app.use("/auth", require('./routes/authRoutes.js'))
 app.use("/api", expressJwt({secret:process.env.SECRET}))
-app.use("/api/weather", require('./routes/weatherRouter.js'))
+app.use("/api/weather", require('./routes/locationRouter.js/index.js'))
 
 
 //Global Error Handler

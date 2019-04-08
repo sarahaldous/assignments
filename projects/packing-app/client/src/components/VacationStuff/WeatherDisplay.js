@@ -6,15 +6,11 @@ class WeatherDisplay extends Component {
    constructor(){
         super()
         this.state={
-
         }
     }
     componentDidMount(){
         this.props.getCoordinatesData()
     }
-
-  
-
 
 // build map function here that returns a div with the below information (nested divs)
 //        /let mappedDay=props.forecast.map(build map out here)
@@ -24,11 +20,14 @@ class WeatherDisplay extends Component {
             let mappedDay = this.props.forecast.map((dayWeather, i) => {
                 console.log(dayWeather)
                 return (
-                    
                     <div>
+                    <div className="weeklyInfo">
                         <h2>{this.props.dailySummary}</h2>
+                        {/* <h2>{this.props.daily.summary}</h2> */}
+                        <div>{this.props.dailyIcon}</div>
                         {/* Put weekly weather summary here */}
-                       
+                       </div>
+                       <div className="dailyInfo">
                           <p>(Date)</p>
                           {/* convert to date readable by human */}
                           <p>Summary: {dayWeather.summary}</p>
@@ -43,7 +42,9 @@ class WeatherDisplay extends Component {
                           <p>Chance of Precipitation: {dayWeather.precipProbability}</p> 
                           {/* convert to percentage, not decimal */}
                           <p>Wind Speed: {dayWeather.windSpeed}</p>
+                          {/* alerts */}
                      </div> 
+                     </div>
                 )
     
                      
