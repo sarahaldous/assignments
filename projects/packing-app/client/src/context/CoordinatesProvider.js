@@ -18,6 +18,8 @@ class CoordinatesProvider extends Component {
             longitude: "",
             city: "",
             state: "",
+            currentState: "",
+            currentCity: "",
             locationInput: "",
             tripLength: "",
             tempRange: "",
@@ -25,13 +27,17 @@ class CoordinatesProvider extends Component {
             forecast: []
         }
     }
+    
 
     getCoordinatesData = props => {
-        const city = this.state.city
-        let correctCity = ''
-        // use regex to find whitespace
-        // remove witespacde
-        // replace with %20
+        const titleCase = (str) => {
+            const strSplit = str.split(" ")
+            for (let i = 0; i < strSplit.length; i++){
+                strSplit[i] = strSplit[i].charAt(0).toUpperCase() + strSplit[i].slice(1)
+            }
+            return strSplit.join(" ")
+        }
+        const city = titleCase(this.state.city)
 
         axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.city}%2C%20${this.state.state}&key=${coordinates}&language=en&pretty=1`).then((response) => {
             this.setState({ latitude: response.data.results[0].geometry.lat, longitude:  response.data.results[0].geometry.lng}, () => this.getWeather())
@@ -44,6 +50,9 @@ class CoordinatesProvider extends Component {
             // console.log(response.data)
             this.setState({ forecast: response.data.daily.data}, () => console.log(this.state.forecast))
             this.setState({ dailySummary: response.data.daily.summary}, () => console.log(this.state.dailySummary))
+            this.setState({ weeklyIcon: response.data.daily.icon}, () => console.log(this.state.weeklyIcon))
+            // this.setState({ dailyIcon: response.data.daily.icon}, () => console.log(this.state.))
+            console.log(response.data.daily.data[0].time)
         }).catch(function(error){
             console.log(error)
         })
@@ -60,7 +69,9 @@ class CoordinatesProvider extends Component {
                 locationInput: [...prevState.locationInput, this.state.locationInput],
                 tripLength: "",
                 tempRange: "",
-                activities: ""
+                activities: "",
+                currentCity: this.state.city,
+                currentState: this.state.state
             }
         },() => this.props.history.push('/weather')) 
         this.getCoordinatesData()

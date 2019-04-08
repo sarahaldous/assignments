@@ -2,9 +2,13 @@
 
 import React from 'react'
 import {withCoordinates} from '../../context/CoordinatesProvider.js'
+import { PromiseProvider } from 'mongoose';
 
 
 const VacationForm = (props) => {
+   
+
+   
     return (
     
         <form className="vacationForm" onSubmit={props.handleSubmit}>
@@ -13,7 +17,7 @@ const VacationForm = (props) => {
                     placeholder="City"
                     value={props.city}
                     onChange={props.handleChange}/>
-                    <input  type="text"
+            <input  type="text"
                     name="state"
                     placeholder="State or Country"
                     value={props.state}
@@ -23,6 +27,7 @@ const VacationForm = (props) => {
                         value={props.dates}
                         /> */}
                 <button>Submit</button>
+                
 
        </form>
     )

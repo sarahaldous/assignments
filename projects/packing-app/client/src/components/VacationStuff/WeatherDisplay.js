@@ -1,6 +1,11 @@
 import React, {Component} from 'react'
 import {withCoordinates} from '../../context/CoordinatesProvider.js'
+import {withLocation} from '../../context/LocationProvider.js'
+import {withUser} from '../../context/UserProvider.js'
 import VacationForm from './VacationForm.js'
+import moment from 'moment'
+
+
 
 class WeatherDisplay extends Component {
    constructor(){
@@ -11,50 +16,80 @@ class WeatherDisplay extends Component {
     componentDidMount(){
         this.props.getCoordinatesData()
     }
+  
+   saveLocation = () => {
+       this.props.setNewLocation(this.props.city, this.props.state, this.props.user._id)
+    console.log(this.props)
+       
+   }
 
 // build map function here that returns a div with the below information (nested divs)
 //        /let mappedDay=props.forecast.map(build map out here)
 
     render(){
         
+        // const convertTime = (props) => {
+        //     const unixTimestamp = this.props.time;
+        //     const date = new Date(unixTimestamp*1000)
+        //     let myDate = this.props.time
+            
+        //     myDate = new Date(this.props.time *1000);
+        //     // write(myDate.toGMTString()+"<br>"+myDate.toLocaleString());
+        //     console.log(this.props.time)
+        //     console.log(date)
+        //     console.log(myDate)
+        //    }
+       const convertPercentage = percentage => {
+           return `${percentage*100}%`
+       }
             let mappedDay = this.props.forecast.map((dayWeather, i) => {
-                console.log(dayWeather)
+                const convertTime = (unixTime) => {
+                    const date = new Date(unixTime*1000)
+                   
+                } 
+                convertTime()
+               
                 return (
-                    <div>
+                    <div key={i}>
+                   
                     <div className="weeklyInfo">
-                        <h2>{this.props.dailySummary}</h2>
-                        {/* <h2>{this.props.daily.summary}</h2> */}
-                        <div>{this.props.dailyIcon}</div>
+                    
+                        
                         {/* Put weekly weather summary here */}
                        </div>
                        <div className="dailyInfo">
-                          <p>(Date)</p>
-                          {/* convert to date readable by human */}
+                           <div className="date">
+                          <p>{moment(dayWeather.time * 1000).format("dddd, MMM DD, YYYY")}</p>
+                          </div>
+                          <div className="dailyDetails">
                           <p>Summary: {dayWeather.summary}</p>
                           <div id="weatherIcon">
                           {/* <img src="{dayWeather.icon}">Icon: </img> */}
                           </div>
-                          <p>High: {dayWeather.temperatureHigh}</p>
-                          <p>Low: {dayWeather.temperatureLow}</p>
-                          <p>Feels Like: {dayWeather.apparentTemperatureLow} to {dayWeather.apparentTemperatureHigh}</p>
-                          <p>Humidity: {dayWeather.humidity}</p>
-                          <p>Cloud Cover: {dayWeather.cloudCover}</p>
-                          <p>Chance of Precipitation: {dayWeather.precipProbability}</p> 
-                          {/* convert to percentage, not decimal */}
-                          <p>Wind Speed: {dayWeather.windSpeed}</p>
-                          {/* alerts */}
+                          
+                          <p>High: {parseFloat(dayWeather.temperatureHigh).toFixed()}°F</p>
+                          <p>Low: {parseFloat(dayWeather.temperatureLow).toFixed()}°F</p>
+                          <p>Feels Like: {parseFloat(dayWeather.apparentTemperatureLow).toFixed()}°F to {parseFloat(dayWeather.apparentTemperatureHigh).toFixed()}°F</p>
+                          <p>Humidity: {parseFloat(convertPercentage(dayWeather.humidity)).toFixed()}%</p>
+                          <p>Cloud Cover: {parseFloat(convertPercentage(dayWeather.cloudCover)).toFixed()}%</p>
+                          <p>Chance of Precipitation: {parseFloat(convertPercentage(dayWeather.precipProbability)).toFixed()}%</p> 
+                          <p>Wind Speed: {parseFloat(dayWeather.windSpeed).toFixed()} MPH</p>
+                           {/* alerts */}
+                          </div>
+                         
                      </div> 
                      </div>
                 )
-    
-                     
-                    
-                })
+ 
+            })
             
       return (
         <div>
             <VacationForm />
-            <h1>This week in {this.props.forecast.city}, {this.props.forecast.state}</h1>
+            <h1>{this.props.currentCity && "This week in " + this.props.currentCity[0].toUpperCase() + this.props.currentCity.slice(1) + ", " + this.props.currentState[0].toUpperCase() + this.props.currentState.slice(1)}</h1>
+            <button onClick={this.saveLocation}>Save Location</button>
+            <h2>{this.props.dailySummary}</h2>
+            {/* <div>{this.props.weeklyIcon}</div> */}
             <h2>{this.props.summary}</h2>
             {mappedDay}
         </div>
@@ -63,7 +98,7 @@ class WeatherDisplay extends Component {
 }
 
 
-export default withCoordinates(WeatherDisplay)
+export default withUser(withLocation(withCoordinates(WeatherDisplay)))
 
 // temperatureHigh: 65.37
 // temperatureLow: 50.75
