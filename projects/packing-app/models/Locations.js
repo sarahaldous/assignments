@@ -3,12 +3,17 @@ const Schema = mongoose.Schema
 
 
 const locationSchema = new Schema({
-    favLocations: [{
-        city: "",
-        state: "",
-        latitude: "",
-        longitude: ""
-    }]
-})
+    
+        city: String,
+        state: String,
+        latitude: String,
+        longitude: String,
+        user: {
+            type: Schema.Types.ObjectId,
+            ref: "User",
+            required: true
+        }
+    }
+)
 
 module.exports = mongoose.model("Locations", locationSchema)

@@ -4,12 +4,20 @@ const weatherRouter = express.Router()
 const Locations = require('../models/Locations.js')
 const locationRouter = express.Router()
 
-
+locationRouter.get('/', (req, res, next) => {
+    Locations.find({user: req.user._id}, (err, locations) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(locations)
+    })
+})
 // Add a location to the user's saved locations
-locationRouter.post('/:userID', (req, res, next) => {
+locationRouter.post('/', (req, res, next) => {
     console.log(req.params)
-   const newLocation = new Location(req.body)
-   newLocation.user = req.params.userID
+   const newLocation = new Locations(req.body)
+   newLocation.user = req.user._id
    newLocation.save((err, userLocation) => {
        if(err){
            res.status(500)
@@ -20,7 +28,7 @@ locationRouter.post('/:userID', (req, res, next) => {
 })
 
 //Delete a user's saved location
-weatherRouter.delete("/:_id", (req, res, next) => {
+locationRouter.delete("/:_id", (req, res, next) => {
    Locations.findOneAndRemove({_id: req.params._id}, (err, deletedLocation) => {
        if(err) {
            res.status(500)

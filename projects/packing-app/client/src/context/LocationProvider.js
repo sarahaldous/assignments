@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import {withUser} from "./UserProvider.js"
 const LocationContext = React.createContext()
+const locationAxios = axios.create()
+
+locationAxios.interceptors.request.use((config) => {
+    const token = localStorage.getItem("token")
+    config.headers.Authorization = `Bearer ${token}`
+    return config
+})
 
 class LocationProvider extends Component {
     constructor() {
@@ -27,10 +34,11 @@ class LocationProvider extends Component {
     addSavedLocation = () => {
         let newLocation = {
             city: this.state.city,
-            state: this.state.state
+            state: this.state.state,
+            lat: this.state.lat,
+            long: this.state.long
         }
-       
-        axios.post(`/api/weather/${this.state.id}`, newLocation).then(response => {
+        locationAxios.post(`/api/weather/`, newLocation).then(response => {
            
             this.setState(prevState => ({
                 mySavedLocations: [...prevState.mySavedLocations, response.data]
@@ -47,7 +55,7 @@ class LocationProvider extends Component {
         }
         this.addSavedCity(newLocation)
     }
-    getSavedLocation = usersID =>{
+    getSavedLocation = id =>{
         axios.get(`/locations/user/${this.props.usersID}`).then(response =>{
             this.setState({
                 mySavedLocations: response.data
@@ -56,11 +64,11 @@ class LocationProvider extends Component {
         .catch (err => console.log(err))
     }
     // user will be able to delete a saved location with handle delete 
-    handleDelete = _id => {
-        axios.delete(`/locations/${_id}`).then(response => {
+    handleDelete = id => {
+        axios.delete(`/locations/${id}`).then(response => {
             alert(response.data)
             this.setState(prevState => ({
-                mySavedLocations: prevState.mySavedLocations.filter(location => location._id !==  _id)
+                mySavedLocations: prevState.mySavedLocations.filter(location => location._id !==  id)
             }))
         })
         .catch(err => console.log(err))

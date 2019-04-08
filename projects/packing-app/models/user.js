@@ -17,11 +17,7 @@ const userSchema = new Schema({
         type: Boolean,
         default: false
     },
-    favLocations: [{
-        type: Schema.Types.ObjectId,
-        ref: "FavLocation",
-        default: []
-    }]
+ 
     // gender: {
     //     type: String,
     //     required: true
