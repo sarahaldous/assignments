@@ -3,6 +3,10 @@
     padding: 0;
     
 }
+.redirectMessage {
+    color: rgb(247, 130, 184);
+    padding: 10%;
+}
 @media (max-width: 600px){
     body {
         margin: 0;

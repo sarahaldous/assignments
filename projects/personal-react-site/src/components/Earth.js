@@ -21,7 +21,7 @@ class Earth extends Component {
         
     return (
         <div className="earthContainer" style={{backgroundImage: `url(${(this.props.randomEarthPhoto())})`}} id="earth-div">
-        
+        <h1 className="redirectMessage" align="center">Please see the improved version of this site on <a href="https://galaxy-site.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify!</a>! </h1>
         </div>
     )
 }
